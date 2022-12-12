@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #def7fe;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container hr {
+    width: 700px;
+    height: 3px;
+    background-color: #000;
+}
+
+.container h1, .container h2, .container h3 {
+    margin: 8px 0;
+}
+
+.container .my_photo {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .my_photo img {
+    position: absolute;
+    top: 0;
+    left: -15%;
+}
+
+.container table.my_work {
+    margin: 20px 0;
+}
+
+.container table.my_work {
+    background-color: #e7ecff;
+}
+
+.container table.my_work .aquamarine {
+    background-color: #b5f2ea;
+}
+
+.container table.my_work {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.container table.my_skills, .container table.my_archivements {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.container table.my_skills tr td:nth-child(1) {
+    background-color: #c6d8ff;
+}
+.container table.my_skills tr td:nth-child(2) {
+    background-color: #fffadd;
+}
+.container table.my_skills tr td:nth-child(3) {
+    background-color: #fed6bc;
+}
+.container table.my_skills tr td:nth-child(4) {
+    background-color: #ffacbb;
+}
+.container table.my_skills tr td:nth-child(5) {
+    background-color: #40cbea;
+}
+
+
+.container table.my_skills {
+    text-align: center;
+}
+
+.container table.my_archivements tr td:nth-child(1) {
+    background-color: #fffadd;
+}
+.container table.my_archivements tr td:nth-child(2) {
+    background-color: #c6d8ff;;
+}

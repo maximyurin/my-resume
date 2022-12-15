@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>My hire form page</title>
 </head>
-<body>
-
-</body>
+    <body>
+        <div class="container hire-container">
+            <div class="hire-form-body">
+                <div class="hire-form-head">
+                    <h1 class="title">Hire me</h1>
+                    <h3 class="subtitle">Contact information</h3>
+                </div>
+                <div class="contact-info">
+                    <table class="contact-info-table">
+                        <tr>
+                            <td><strong><strong>Phone</strong></strong></td>
+                            <td>+38 (066) 249 71 33</td>
+                        </tr>
+                        <tr>
+                            <td><strong><strong>Adress</strong></strong></td>
+                            <td>Kiev region, Kriukivshchyna</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="contact-form">
+                    <form action="" id="hire-me-form" method="get">
+                        <fieldset>
+                            <legend>Contact form</legend>
+                            <div class="form-email-container">
+                                <label for="contact-email"><strong>Email*:</strong></label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-textarea-container">
+                                <label for="contact-text"><strong>Description</strong></label>
+                                <textarea name="description" id="contact-text" cols="40" rows="8"></textarea>
+                            </div>
+                            <div class="form-select-container"><label for="select-work-type"><strong>Work type:</strong></label>
+                                <select name="selection" id="select-work-type">
+                                    <option></option>
+                                    <option value="Work in office">Work in office</option>
+                                    <option value="Distant work">Distant work</option>
+                                    <option value="One-time project">One-time project</option>
+                                </select>
+                            </div>
+                            <button class="form-btn" type="submit" form="hire-me-form" value="Submit">Hire me</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

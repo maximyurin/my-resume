@@ -110,3 +110,79 @@ body {
 .container table.my_archivements tr td:nth-child(2) {
     background-color: #c6d8ff;;
 }
+
+/* Hire me page styles */
+
+.hire-container {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hire-form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .contact-info {
+    width: 500px;
+    margin: 20px 0;
+}
+
+.contact-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-info-table td  {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+.contact-form form {
+    width: 500px;
+    text-align: left;
+}
+
+.contact-form legend {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-form input[type="email"]{
+    padding: 5px 8px;
+    margin: 10px 0 20px 0;
+    width: 310px;
+}
+
+.contact-form textarea, .contact-form select {
+    padding: 5px 8px;
+}
+
+.contact-form select option {
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-textarea-container {
+    display: flex;
+}
+
+.contact-form .form-textarea-container label {
+    margin-right: 20px;
+}
+
+.contact-form .form-email-container label {
+    margin-right: 50px;
+}
+
+.contact-form .form-select-container label {
+    margin-right: 20px;
+}

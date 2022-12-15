@@ -23,9 +23,31 @@ body {
     margin: 8px 0;
 }
 
+.container .job-btn, .contact-form .form-btn-container .form-btn {
+    padding: 8px 32px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #c6d8ff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #000;
+    border: 1px solid #000 ;
+}
+
+.container .job-btn:hover, .contact-form .form-btn-container .form-btn:hover {
+    color: #fff;
+    background-color: #40cbea;
+    transition: all 200ms linear;
+    text-shadow: 1px 1px black;
+    cursor: pointer;
+}
+
 .container .my_photo {
-    width: 320px;
-    height: 320px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     margin: 20px auto;
     overflow: hidden;
@@ -34,8 +56,8 @@ body {
 
 .container .my_photo img {
     position: absolute;
-    top: 0;
-    left: -15%;
+    top: -10%;
+    left: -30%;
 }
 
 .align_left {
@@ -113,23 +135,17 @@ body {
 
 /* Hire me page styles */
 
-.hire-container {
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .hire-form-body {
+    width: 700px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .container .contact-info {
     width: 500px;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 .contact-info-table {
@@ -169,6 +185,7 @@ body {
 
 .contact-form textarea {
     margin-bottom: 20px;
+    resize: none;
 }
 
 .contact-form .form-textarea-container {
@@ -186,3 +203,8 @@ body {
 .contact-form .form-select-container label {
     margin-right: 20px;
 }
+ .contact-form .form-btn-container {
+     text-align: center;
+     margin: 20px 0 10px 0;
+ }
+

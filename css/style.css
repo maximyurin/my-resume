@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     font-family: sans-serif;
+    color: #333;
     background-color: #def7fe;
 }
 
@@ -11,6 +12,14 @@ body {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+}
+
+.container h1 {
+    font-style: italic;
+}
+
+.container h3 {
+    font-weight: 800;
 }
 
 .container hr {
@@ -87,7 +96,20 @@ body {
     width: 100%;
     margin: 15px 0;
     border-collapse: collapse;
+}
 
+.container table.my_work a.work_link {
+    color: #00f;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.container table.my_work a.work_link:hover {
+    text-decoration: none;
+}
+
+.container table.my_work a.work_link:visited {
+    color: #005;
 }
 
 .container table.my_work td {
@@ -95,10 +117,32 @@ body {
     border: 1px solid #000;
 }
 
+.upper {
+    text-transform: uppercase;
+}
+
 .container table.my_skills, .container table.my_archivements {
     width: 100%;
     margin: 9px 0;
     border-collapse: collapse;
+}
+
+.container table.my_skills span.skills_square {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.container table.my_skills span.skills_square:before {
+    content: '';
+    font-weight: bold;
+    margin-right: 10px;
+    height: 7px;
+    width: 7px;
+    background-color: #333;
+
 }
 
 .container table.my_skills td, .container table.my_archivements td {

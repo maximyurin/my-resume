@@ -8,31 +8,42 @@ body {
     background-color: #def7fe;
 }
 
+a:visited {
+    text-decoration: none;
+}
+
 .container {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
-.container h1 {
+.container .person h1 {
     font-style: italic;
+    margin-top: 20px;
 }
 
-.container h3 {
+.container .person_position h2 {
     font-weight: 800;
 }
 
-.container hr {
+.container .person::after, .container .person_position::after, .container .table_my-skills-container::after, .container .offer_link::after, .container .person_experience-container::after {
+    content: '';
+    display: inline-block;
     width: 700px;
-    height: 3px;
-    background-color: #000;
+    height: 2px;
+    background-color: #40cbea;
 }
 
 .container h1, .container h2, .container h3 {
     margin: 8px 0;
 }
 
-.container .job-btn, .contact-form .form-btn-container .form-btn {
+.container .offer_link {
+    margin: 10px 0;
+}
+
+.container .offer_link .job-btn, .contact-form .form-btn-container .form-btn {
     padding: 10px 32px;
     font-size: 16px;
     text-transform: uppercase;
@@ -57,9 +68,10 @@ body {
 .container .my_photo {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
     margin: 20px auto;
     overflow: hidden;
+    border: 2px solid #40cbea;
+    padding: 10px;
 }
 
 .container .my_photo img {
@@ -144,7 +156,11 @@ body {
 
 }
 
-.container table.my_skills td, .container table.my_archivements td {
+.container .table_my-archivements-container {
+    margin-bottom: 20px;
+}
+
+.container table.my_skills td, .container .table_my-archivements-container table.my_archivements td {
     padding: 8px;
     border: 1px solid #000;
 }

@@ -48,21 +48,23 @@ a:visited {
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
-    background-color: #fffadd;
+    background-color: #40cbea;
+    text-shadow: 1px 1px 3px black;
     text-decoration: none;
     display: inline-block;
     margin: 5px 0;
     border-radius: 5px;
-    color: #333;
-    border: 1px solid #000 ;
+    color: #fff;
+    border: 1px solid #333;
+    letter-spacing: 1px;
 }
 
 .container .job-btn:hover, .contact-form .form-btn-container .form-btn:hover {
     color: #fff;
-    background-color: #40cbea;
     transition: all 200ms linear;
     text-shadow: 1px 1px 3px black;
     cursor: pointer;
+    background-color: #10a9cb;
 }
 
 .container .my_photo {

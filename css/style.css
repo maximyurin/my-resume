@@ -13,34 +13,69 @@ a:visited {
 }
 
 .container {
-    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.container .person h1 {
+.container .person {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container .person_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.container .person .person_info .person_title h1 {
     font-style: italic;
-    margin-top: 20px;
+    margin: 5px 0;
+    font-size: 24px;
 }
 
-.container .person_position h2 {
+.container .person .person_info .person_position h2 {
     font-weight: 800;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
 }
 
-.container .person::after, .container .person_position::after, .container .table_my-skills-container::after, .container .offer_link::after, .container .person_experience-container::after {
+.container .my_photo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid #40cbea;
+    padding: 10px;
+}
+
+.container .my_photo img {
+    width: 100px;
+    height: 100px;
+    filter: grayscale(50%);
+}
+
+.container .person .person_title::after, .container .person .person_position::after, .container .person_experience-container::after {
     content: '';
     display: inline-block;
-    width: 700px;
+    width: 400px;
     height: 2px;
     background-color: #40cbea;
 }
 
-.container h1, .container h2, .container h3 {
-    margin: 8px 0;
+.container .table_my-skills-container::after, .container .table_my-archivements-container::after  {
+    width: 100%;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    background-color: #40cbea;
+    margin-top: 20px;
 }
 
 .container .offer_link {
-    margin: 10px 0;
+    margin: 30px 0 10px 0;
+    text-align: center;
 }
 
 .container .offer_link .job-btn, .contact-form .form-btn-container .form-btn {
@@ -67,19 +102,13 @@ a:visited {
     background-color: #10a9cb;
 }
 
-.container .my_photo {
-    width: 250px;
-    height: 250px;
-    margin: 20px auto;
-    overflow: hidden;
-    border: 2px solid #40cbea;
-    padding: 10px;
+.person_experience-container {
+    text-align: left;
 }
 
-.container .my_photo img {
-    width: 250px;
-    height: 250px;
-    filter: grayscale(50%);
+.person_experience-container h2 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
 }
 
 .align_left {
@@ -196,11 +225,16 @@ a:visited {
 
 /* Hire me page styles */
 
+.hire-container {
+    text-align: center;
+}
+
 .hire-form-body {
     width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .container .contact-info {

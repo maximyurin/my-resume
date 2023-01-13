@@ -1,308 +1,105 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter/Inter-VariableFont.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: sans-serif;
-    color: #333;
-    background-color: #def7fe;
+    font-family: Inter, sans-serif;
+    background: #1E1E1E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+a {
+    font-family: Inter, sans-serif;
+    color: #1C2E8C;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 a:visited {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    margin-top: 5px;
+main.person-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container .person {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+aside.person-info {
+    background-color: #86A3B4;
 }
 
-.container .person_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
+aside.person-info .person-name, aside.person-info .person-languages {
+    padding: 60px 50px 40px 41px;
 }
 
-.container .person .person_info .person_title h1 {
-    font-style: italic;
-    margin: 5px 0;
-    font-size: 24px;
-}
-
-.container .person .person_info .person_position h2 {
-    font-weight: 800;
-    font-size: 18px;
-    margin: 10px 0 5px 0;
-}
-
-.container .person_photo {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border: 2px solid #40cbea;
-    padding: 10px;
-}
-
-.container .person_photo img {
-    width: 100px;
-    height: 100px;
-    filter: grayscale(50%);
-}
-
-.container .person .person_title::after, .container .person .person_position::after {
-    content: '';
-    display: inline-block;
-    width: 400px;
-    height: 2px;
-    background-color: #40cbea;
-}
-
-.container .person-skills-container::after, .container .person_archivements_container::after  {
-    width: 100%;
-    content: '';
-    display: inline-block;
-    height: 2px;
-    background-color: #40cbea;
-    margin-top: 20px;
-}
-
-.container .person_offer_link {
-    margin: 30px 0 10px 0;
-    text-align: center;
-}
-
-.container .person_offer_link .job-btn, .contact-form .form-btn-container .form-btn {
-    padding: 10px 32px;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: #40cbea;
-    text-shadow: 1px 1px 3px black;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px 0;
-    border-radius: 5px;
+aside.person-info .person-name h2.name {
+    font-family: Inter, sans-serif;
+    font-size: 40px;
     color: #fff;
-    border: 1px solid #333;
+    line-height: 48px;
+    letter-spacing: 1px;
+
+}
+
+aside.person-info h3.person-header {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: 1px;
 }
 
-.container .job-btn:hover, .contact-form .form-btn-container .form-btn:hover {
-    color: #fff;
-    transition: all 200ms linear;
-    text-shadow: 1px 1px 3px black;
-    cursor: pointer;
-    background-color: #10a9cb;
-}
-
-.person_experience-container {
-    text-align: left;
-    margin-bottom: 60px;
-}
-
-.person_experience-container h2 {
-    margin: 10px 0 5px 0;
-    font-size: 18px;
-}
-
-.align_left {
-    text-align: left;
-}
-
-.align_center {
-    text-align: center;
-}
-.vertical_top {
-    vertical-align: top;
-}
-
-.container table.person_work_experience {
-    margin: 20px 0;
-}
-
-.container table.person_work_experience {
-    background-color: #e7ecff;
-}
-
-.container table.person_work_experience .aquamarine {
-    background-color: #b5f2ea;
-}
-
-.container table.person_work_experience {
-    width: 100%;
-    margin: 15px 0;
-    border-collapse: collapse;
-}
-
-.container table.person_work_experience a.work_link {
-    color: #00f;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.container table.person_work_experience a.work_link:hover {
-    text-decoration: none;
-}
-
-.container table.person_work_experience a.work_link:visited {
-    color: #005;
-}
-
-.container table.person_work_experience td {
-    padding: 8px;
-    border: 1px solid #000;
-}
-
-.upper {
-    text-transform: uppercase;
-}
-
-.container table.person_skills, .container table.person_archivements {
-    width: 100%;
-    margin: 9px 0;
-    border-collapse: collapse;
-}
-
-.container table.person_skills span.skills_square {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.container table.person_skills span.skills_square:before {
+aside.person-info header::after {
     content: '';
-    font-weight: bold;
-    margin-right: 10px;
-    height: 7px;
-    width: 7px;
-    background-color: #333;
-
+    display: block;
+    width: 290px;
+    height: 6px;
+    background-color: #1E1E1E;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.container .person_archivements_container {
-    margin-bottom: 20px;
+aside.person-info .person-name span.surname {
+    color: #1C2E8C;
 }
 
-.container table.person_skills td, .container .person_archivements_container table.person_archivements td {
-    padding: 8px;
-    border: 1px solid #000;
-}
-
-.container table.person_skills tr td:nth-child(1) {
-    background-color: #c6d8ff;
-}
-.container table.person_skills tr td:nth-child(2) {
-    background-color: #fffadd;
-}
-.container table.person_skills tr td:nth-child(3) {
-    background-color: #fed6bc;
-}
-.container table.person_skills tr td:nth-child(4) {
-    background-color: #ffacbb;
-}
-.container table.person_skills tr td:nth-child(5) {
-    background-color: #40cbea;
-}
-
-.container table.person_skills {
-    text-align: center;
-}
-
-.container table.person_archivements tr td:nth-child(1) {
-    background-color: #fffadd;
-}
-.container table.person_archivements tr td:nth-child(2) {
-    background-color: #c6d8ff;;
-}
-
-/* Hire me page styles */
-
-.hire-container {
-    text-align: center;
-}
-
-.hire-form-body {
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-}
-
-.container .contact-info {
-    width: 500px;
-    margin: 10px 0 20px 0;
-}
-
-.contact-info-table {
+aside.person-info .person-photo img {
     width: 100%;
-    border-collapse: collapse;
 }
 
-.contact-info-table td  {
-    padding: 8px;
-    border: 1px solid #000;
+aside.person-info .person-contact-info {
+    padding: 50px 50px 40px 41px;
 }
 
-.contact-form form {
-    width: 500px;
-    text-align: left;
+article.person-content {
+    padding: 58px 54px;
+    background: #fff;
 }
 
-.contact-form legend {
-    text-align: left;
-    font-weight: bold;
-    font-size: 18px;
+article.person-content header::after {
+    content: '';
+    display: block;
+    width: 660px;
+    height: 5px;
+    background-color: #1E1E1E;
+    margin: 28px 0;
 }
 
-.contact-form input[type="email"]{
-    padding: 5px 8px;
-    margin: 10px 0 20px 0;
-    width: 310px;
+article.person-content h2.person-header {
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1px;
 }
 
-.contact-form textarea, .contact-form select {
-    padding: 5px 8px;
-}
-
-.contact-form select option {
-    font-size: 14px;
-}
-
-.contact-form textarea {
-    margin-bottom: 20px;
-    resize: none;
-}
-
-.contact-form .form-textarea-container {
-    display: flex;
-}
-
-.contact-form .form-textarea-container label {
-    margin-right: 20px;
-}
-
-.contact-form .form-email-container label {
-    margin-right: 50px;
-}
-
-.contact-form .form-select-container label {
-    margin-right: 20px;
-}
- .contact-form .form-btn-container {
-     text-align: center;
-     margin: 20px 0 10px 0;
- }
 

@@ -1,10 +1,19 @@
+// Font import
 @font-face {
   font-family: Inter;
   src: url(../fonts/inter/Inter-VariableFont.ttf);
 }
 
+// Variables
 @font: Inter, sans-serif;
 
+// Mixins
+.basic-font-options {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// Reset css
 body {
   margin: 0;
   padding: 0;
@@ -12,19 +21,21 @@ body {
   font-size: 16px;
   font-family: @font;
   background: #1E1E1E;
+  color: #1E1E1E;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: @font;
   margin: 0;
   font-weight: 600;
+  color: #1E1E1E;
+
 }
 
 a {
   font-family: @font;
   color: #1C2E8C;
-  font-size: 16px;
-  font-weight: 600;
+  .basic-font-options();
   text-decoration: none;
 }
 
@@ -32,12 +43,13 @@ a:visited {
   text-decoration: none;
 }
 
-main.person-container {
+// Index page css
+.person-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1200px;
   margin: 0 auto;
-  aside.person-info {
+  .person-info {
     header::after {
       content: '';
       display: block;
@@ -48,7 +60,6 @@ main.person-container {
       margin-bottom: 30px;
     }
     h3.person-header {
-      font-family: @font;
       font-size: 32px;
       line-height: 38px;
       letter-spacing: 1px;
@@ -57,7 +68,6 @@ main.person-container {
     .person-name {
       padding: 58px 85px 36px 40px;
       h2.name {
-        font-family: @font;
         font-size: 40px;
         color: #fff;
         line-height: 48px;
@@ -73,7 +83,7 @@ main.person-container {
       }
     }
     .person-contact-info {
-      padding: 54px 50px 0 41px;
+      padding: 50px 50px 0 41px;
       section {
         h4 {
           font-size: 24px;
@@ -81,8 +91,7 @@ main.person-container {
           line-height: 29px;
         }
         p {
-          font-size: 16px;
-          font-weight: 600;
+          .basic-font-options();
           line-height: 20px;
           margin: 10px 0 40px 0;
         }
@@ -103,14 +112,13 @@ main.person-container {
       }
     }
   }
-  article.person-content {
+  .person-content {
     padding: 58px 54px;
     background: #fff;
     .person-skills, .person-work-experience, .person-education {
-      margin-top: 47px;
+      margin-top: 57px;
     }
     h2.person-header {
-      font-family: @font;
       font-size: 36px;
       line-height: 44px;
       letter-spacing: 1px;
@@ -121,14 +129,20 @@ main.person-container {
       width: 660px;
       height: 5px;
       background-color: #1E1E1E;
-      margin: 25px 0;
+      margin: 24px 0;
     }
     .person-summary {
       p {
         font-family: @font;
-        font-size: 16px;
+        .basic-font-options();
         line-height: 20px;
-        font-weight: 600;
+        text-align: justify;
+      }
+    }
+    .person-work-experience {
+      p.person-content-p {
+        font-size: 14px;
+        line-height: 17px;
       }
     }
     .person-skills {
@@ -140,9 +154,8 @@ main.person-container {
           margin: 0;
           li {
             font-family: @font;
-            font-size: 16px;
+            .basic-font-options();
             line-height: 19px;
-            font-weight: 600;
           }
         }
       }

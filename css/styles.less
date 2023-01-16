@@ -43,6 +43,16 @@ a:visited {
   text-decoration: none;
 }
 
+input,
+select,
+textarea {
+  appearance: none;
+  margin: 0;
+  border: none;
+  background: #F8FAFC;
+  padding: 12px;
+}
+
 // Index page css
 .person-container {
   display: grid;
@@ -162,3 +172,60 @@ a:visited {
     }
   }
 }
+
+// Hire me Page
+body.hire-me-page {
+  background-color: #fff;
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 50px;
+    .hire-form-body {
+      .hire-form-head {
+        h1.title {
+          font-family: @font;
+          text-transform: uppercase;
+          font-weight: 900;
+          letter-spacing: 1px;
+          margin-bottom: 20px;
+        }
+        h3.subtitle {
+          margin-bottom: 20px;
+        }
+      }
+      .contact-info {
+        table.contact-info-table {
+        }
+      }
+      .contact-form {
+        form#hire-me-form {
+          .form-email-container {
+            input[type="email"] {
+            }
+          }
+          .form-textarea-container {
+            textarea {
+            }
+          }
+          .form-btn-container{
+            margin-top: 40px;
+            .form-btn {
+              background-color: #7B61FF;
+              border: none;
+              color: #fff;
+              padding: 12px 16px 10px 16px;
+              font-size: 20px;
+              border-radius: 10px;
+              &:hover {
+                cursor: pointer;
+                background-color: #002266;
+                transition: 300ms ease all;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

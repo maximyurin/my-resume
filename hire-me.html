@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <title>My hire form page</title>
 </head>
-    <body>
-        <div class="container hire-container">
+    <body class="hire-me-page">
+        <div class="container">
             <div class="hire-form-body">
                 <div class="hire-form-head">
                     <h1 class="title">To offer a job</h1>
@@ -26,7 +27,6 @@
                 </div>
                 <div class="contact-form">
                     <form action="" id="hire-me-form" method="post">
-                        <fieldset>
                             <legend>Contact form</legend>
                             <div class="form-email-container">
                                 <label for="contact-email"><strong>Email*:</strong></label>
@@ -46,7 +46,6 @@
                             <div class="form-btn-container">
                                 <button class="form-btn" type="submit" form="hire-me-form" value="Submit">Hire me</button>
                             </div>
-                        </fieldset>
                     </form>
                 </div>
             </div>

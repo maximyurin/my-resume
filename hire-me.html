@@ -16,11 +16,11 @@
                 <div class="contact-info">
                     <table class="contact-info-table">
                         <tr>
-                            <td><strong>Phone</strong></td>
+                            <td class="phone">Phone</td>
                             <td>+38 (066) 249 71 33</td>
                         </tr>
                         <tr>
-                            <td><strong>Adress</strong></td>
+                            <td>Adress</td>
                             <td>Kiev region, Kriukivshchyna</td>
                         </tr>
                     </table>
@@ -29,14 +29,15 @@
                     <form action="" id="hire-me-form" method="post">
                             <legend>Contact form</legend>
                             <div class="form-email-container">
-                                <label for="contact-email"><strong>Email*:</strong></label>
-                                <input type="email" id="contact-email" placeholder="Please enter your Email (Required field)" required>
+                                <label for="contact-email">Email *</label>
+                                <input type="email" id="contact-email" placeholder="Email" required>
                             </div>
                             <div class="form-textarea-container">
-                                <label for="contact-text"><strong>Description</strong></label>
-                                <textarea name="description" id="contact-text" cols="40" rows="8" placeholder="Please write a description about your project"></textarea>
+                                <label for="contact-text">Description</label>
+                                <textarea name="description" id="contact-text" placeholder="Hint text"></textarea>
                             </div>
-                            <div class="form-select-container"><label for="select-work-type"><strong>Work type:</strong></label>
+                            <div class="form-select-container">
+                                <label for="select-work-type">Work type</label>
                                 <select name="selection" id="select-work-type">
                                     <option value="Work in office">Work in office</option>
                                     <option value="Distant work">Distant work</option>

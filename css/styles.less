@@ -194,26 +194,30 @@ body.hire-me-page {
           text-transform: uppercase;
           font-weight: 900;
           letter-spacing: 1px;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
         }
         h3.subtitle {
           font-family: @font2;
           margin-bottom: 20px;
+          letter-spacing: 1px;
         }
       }
       .contact-info {
+        margin-bottom: 20px;
         table.contact-info-table {
           width: 100%;
           border-collapse: collapse;
           tr, td {
-            border: 1px solid #7B61FF;
+            border: 1px solid #000;
             padding: 12px;
             line-height: 24px;
             letter-spacing: 1px;
+            font-weight: bold;
           }
           td.phone {
             position: relative;
             font-weight: bold;
+            padding-left: 60px;
             &::after {
               content: '';
               display: block;
@@ -224,13 +228,36 @@ body.hire-me-page {
               background-image: url(../img/icons/phone-icon.png);
               position: absolute;
               top: 4px;
-              right: 8px;
+              left: 6px;
+            }
+          }
+          td.address {
+            position: relative;
+            padding-left: 60px;
+            &::after {
+              content: '';
+              display: block;
+              width: 40px;
+              height: 40px;
+              background-position: center center;
+              background-size: cover;
+              background-image: url(../img/icons/map-icon.png);
+              position: absolute;
+              top: 4px;
+              left: 6px;
             }
           }
         }
       }
+      .notice {
+        text-align: center;
+        h3 {
+          font-family: @font2;
+          letter-spacing: 1px;
+        }
+      }
       .contact-form {
-        margin-top: 30px;
+        margin-top: 20px;
         form#hire-me-form {
           font-family: @font2;
           padding: 16px;
@@ -245,7 +272,7 @@ body.hire-me-page {
             letter-spacing: 1px;
           }
           .form-email-container {
-            margin: 32px 0;
+            margin: 0 0 32px 0;
             label {
               font-family: @font2;
               letter-spacing: 1px;
@@ -293,7 +320,7 @@ body.hire-me-page {
               letter-spacing: 1px;
               font-size: 16px
             }
-            select#select-work-type {
+            .select-arrow {
               margin-top: 15px;
               font-family: @font2;
               font-size: 16px;
@@ -301,9 +328,20 @@ body.hire-me-page {
               padding: 12px;
               line-height: 24px;
               letter-spacing: 1px;
+              position: relative;
               &:hover {
                 cursor: pointer;
               }
+/*              &::after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 5px;
+                background-position: center center;
+                background-size: cover;
+                background-image: url(../img/icons/vector.png);
+                position: absolute;
+              }*/
             }
           }
           .form-btn-container{

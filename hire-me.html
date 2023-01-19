@@ -11,28 +11,29 @@
             <div class="hire-form-body">
                 <div class="hire-form-head">
                     <h1 class="title">To offer a job</h1>
-                    <h3 class="subtitle">Contact information</h3>
+                    <h2 class="subtitle">Contact information</h2>
                 </div>
                 <div class="contact-info">
                     <table class="contact-info-table">
                         <tr>
-                            <td>Phone</td>
-                            <td class="phone">(066) 249 71 33 (Viber, Telegram)</td>
+                            <td class="phone">Phone</td>
+                            <td>(066) 249 71 33 (Viber, Telegram)</td>
                         </tr>
                         <tr>
-                            <td>Address</td>
-                            <td class="address">Kiev Region, Kriukivshchyna</td>
+                            <td class="address">Address</td>
+                            <td>Kiev Region, Kriukivshchyna</td>
                         </tr>
                     </table>
                 </div>
                 <div class="notice">
-                    <h3>Please fill out the form below</h3>
+                    <h2>Please fill out the form below</h2>
                 </div>
                 <div class="contact-form">
-                    <form action="" id="hire-me-form" method="post">
+                    <form action="/forms.html" id="hire-me-form" method="get">
                             <div class="form-email-container">
                                 <label for="contact-email">Email *</label>
                                 <input type="email" id="contact-email" placeholder="Please enter your Email" required>
+                                <span data-text="Please enter a valid Email" class="err"></span>
                             </div>
                             <div class="form-textarea-container">
                                 <label for="contact-text">Description</label>

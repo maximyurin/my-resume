@@ -86,9 +86,13 @@ input:focus, select:focus, textarea:focus {
   grid-template-columns: 1fr 2fr;
   max-width: 1200px;
   margin: 0 auto;
-  border-left: 1px solid #1E1E1E;
   border-right: 1px solid #1E1E1E;
   .person-info {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     header::after {
       content: '';
       display: block;
@@ -225,8 +229,9 @@ input:focus, select:focus, textarea:focus {
 body {
   .container {
     max-width: 1024px;
-    margin: 0 auto;
     padding-top: 20px;
+    position: absolute;
+    left: calc(50% - 250px);
     .hire-form-body {
       width: 500px;
       margin: 0 auto;

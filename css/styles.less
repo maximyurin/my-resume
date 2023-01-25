@@ -9,8 +9,8 @@
 }
 
 // Variables
-@font: Inter, sans-serif;
-@font2: 'IBM Plex Sans', sans-serif;
+@font-family--inter: Inter, sans-serif;
+@font-family--ibm-plex: 'IBM Plex Sans', sans-serif;
 @grey_color: #6F7482;
 @light_grey_color: #B8BCCA;
 @text_primary_color: #3B4256;
@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 .basic-font2-options {
-  font-family: @font2;
+  font-family: @font-family--ibm-plex;
   letter-spacing: 1px;
 }
 .icons_after {
@@ -43,19 +43,19 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: @font;
+  font-family: @font-family--inter;
   color: #1E1E1E;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: @font;
+  font-family: @font-family--inter;
   margin: 0;
   font-weight: 600;
   color: #1E1E1E;
 }
 
 a {
-  font-family: @font;
+  font-family: @font-family--inter;
   color: #1C2E8C;
   .basic-font-options();
   text-decoration: none;
@@ -81,145 +81,142 @@ input:focus, select:focus, textarea:focus {
 }
 
 // Index page css
-.person-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-right: 1px solid #1E1E1E;
-  .person-info {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    header::after {
-      content: '';
-      display: block;
-      width: 290px;
-      height: 6px;
-      background-color: #1E1E1E;
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-    h3.person-header {
-      font-size: 32px;
-      line-height: 38px;
+.person-info {
+  width: 25rem;
+  position: fixed;
+  left: 22.5rem;
+  top: 0;
+  z-index: 5;
+  header::after {
+    content: '';
+    display: block;
+    width: 290px;
+    height: 6px;
+    background-color: #1E1E1E;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  h3.person-header {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 1px;
+  }
+  background-color: #86A3B4;
+  .person-name {
+    padding: 40px 85px 20px 40px;
+    h2.name {
+      font-size: 40px;
+      color: #fff;
+      line-height: 48px;
       letter-spacing: 1px;
     }
-    background-color: #86A3B4;
-    .person-name {
-      padding: 58px 85px 36px 40px;
-      h2.name {
-        font-size: 40px;
-        color: #fff;
-        line-height: 48px;
-        letter-spacing: 1px;
-      }
-      span.surname {
-        color: #1C2E8C;
-      }
+    span.surname {
+      color: #1C2E8C;
     }
-    .person-photo {
-      img {
-        width: 100%;
-      }
+  }
+  .person-photo {
+    img {
+      width: 100%;
     }
-    .person-contact-info {
-      padding: 50px 50px 0 41px;
-      section {
-        h4 {
-          font-size: 24px;
-          font-weight: 600;
-          line-height: 29px;
-        }
-        p {
-          .basic-font-options();
-          line-height: 20px;
-          margin: 10px 0 40px 0;
-        }
-        a {
+  }
+  .person-contact-info {
+    padding: 30px 30px 0 41px;
+    section {
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+      }
+      p {
+        .basic-font-options();
+        line-height: 20px;
+        margin: 0 0 20px 0;
+      }
+      a {
+        display: block;
+        margin: 0 0 20px 0;
+        &.linkedin-link {
           display: block;
-          margin: 10px 0 40px 0;
-          &.linkedin-link {
-            display: block;
-            margin: 10px 0 0 0;
-          }
         }
-      }
-    }
-    .person-languages {
-      padding: 36px 50px 36px 41px;
-      h3.language {
-        margin: 15px 0;
       }
     }
   }
-  .person-content {
-    padding: 58px 54px;
-    background: #fff;
-    .person-skills, .person-work-experience, .person-education {
-      margin-top: 57px;
+  .person-languages {
+    padding: 0 50px 36px 41px;
+    h3.language {
+      margin: 5px 0;
     }
-    h2.person-header {
-      font-size: 36px;
-      line-height: 44px;
-      letter-spacing: 1px;
+  }
+}
+.person-content {
+  width: 50rem;
+  position: absolute;
+  left: calc(50% - 11.375rem);
+  padding: 58px 54px;
+  background: #fff;
+  border-right: 1px solid @light_grey_color;
+  box-sizing: border-box;
+  .person-skills, .person-work-experience, .person-education {
+    margin-top: 57px;
+  }
+  h2.person-header {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1px;
+  }
+  header::after {
+    content: '';
+    display: block;
+    width: 660px;
+    height: 5px;
+    background-color: #1E1E1E;
+    margin: 24px 0;
+  }
+  .person-summary {
+    p {
+      font-family: @font-family--inter;
+      .basic-font-options();
+      line-height: 20px;
+      text-align: justify;
     }
-    header::after {
-      content: '';
-      display: block;
-      width: 660px;
-      height: 5px;
-      background-color: #1E1E1E;
-      margin: 24px 0;
+  }
+  .person-work-experience {
+    p.person-content-p {
+      font-size: 14px;
+      line-height: 17px;
     }
-    .person-summary {
-      p {
-        font-family: @font;
-        .basic-font-options();
-        line-height: 20px;
-        text-align: justify;
-      }
-    }
-    .person-work-experience {
-      p.person-content-p {
-        font-size: 14px;
-        line-height: 17px;
-      }
-    }
-    .person-skills {
-      .skills-lists-container {
-        display: flex;
-        ul.first-skills-list, ul.second-skills-list {
-          flex-grow: 1;
-          padding-left: 30px;
-          margin: 0;
-          li {
-            font-family: @font;
-            .basic-font-options();
-            line-height: 19px;
-          }
+  }
+  .person-skills {
+    .skills-lists-container {
+      display: flex;
+      ul.first-skills-list, ul.second-skills-list {
+        flex-grow: 1;
+        padding-left: 30px;
+        margin: 0;
+        li {
+          font-family: @font-family--inter;
+          .basic-font-options();
+          line-height: 19px;
         }
       }
     }
-    .person-form-link-container {
-      text-align: center;
-      margin: 40px 0;
-      a.form-link {
-        background-color: #7B61FF;
-        border: none;
-        font-weight: 500;
-        color: #fff;
-        padding: 12px 16px;
-        font-size: 18px;
-        line-height: 23px;
-        border-radius: 6px;
-        &:hover {
-          cursor: pointer;
-          background-color: #002266;
-          transition: 300ms ease all;
-        }
+  }
+  .person-form-link-container {
+    text-align: center;
+    margin: 40px 0;
+    a.form-link {
+      background-color: #7B61FF;
+      border: none;
+      font-weight: 500;
+      color: #fff;
+      padding: 12px 16px;
+      font-size: 18px;
+      line-height: 23px;
+      border-radius: 6px;
+      &:hover {
+        cursor: pointer;
+        background-color: #002266;
+        transition: 300ms ease all;
       }
     }
   }
@@ -228,13 +225,14 @@ input:focus, select:focus, textarea:focus {
 // Hire me Page
 body {
   .container {
-    max-width: 1024px;
-    padding-top: 20px;
+    width: 1024px;
     position: absolute;
-    left: calc(50% - 250px);
+    left: calc(50% - 512px);
+    top: calc(50% - 448px);
     .hire-form-body {
       width: 500px;
-      margin: 0 auto;
+      position: absolute;
+      left: calc(50% - 250px);
       .hire-form-head {
         text-align: center;
         h1.title {
@@ -299,7 +297,7 @@ body {
       .contact-form {
         margin-top: 30px;
         form#hire-me-form {
-          font-family: @font2;
+          font-family: @font-family--ibm-plex;
           padding: 16px;
           border: 1px solid @blue_primary;
           border-radius: 16px;
@@ -312,7 +310,7 @@ body {
               font-size: 16px;
             }
             input[type="email"] {
-              font-family: @font2;
+              font-family: @font-family--ibm-plex;
               margin-top: 15px;
               width: 100%;
               font-size: 16px;
@@ -337,7 +335,7 @@ body {
                   position: absolute;
                   content: attr(data-text);
                   margin-top: 5px;
-                  font-family: @font2;
+                  font-family: @font-family--ibm-plex;
                   color: #ED0131;
                   font-size: 12px;
                   letter-spacing: 1px;
@@ -357,7 +355,7 @@ body {
               font-size: 16px;
             }
             textarea {
-              font-family: @font2;
+              font-family: @font-family--ibm-plex;
               margin-top: 15px;
               width: 100%;
               height: 170px;
@@ -383,7 +381,7 @@ body {
             select {
               background: url('../img/icons/vector.png') no-repeat center right 17px, #F8FAFC;
               margin-top: 15px;
-              font-family: @font2;
+              font-family: @font-family--ibm-plex;
               color: @grey_color;
               font-size: 16px;
               width: 100%;

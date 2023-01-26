@@ -1,0 +1,393 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter/Inter-VariableFont.ttf);
+}
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    color: #1E1E1E;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    font-weight: 600;
+    color: #1E1E1E;
+}
+a {
+    font-family: Inter, sans-serif;
+    color: #1C2E8C;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+input, select, textarea {
+    appearance: none;
+    margin: 0;
+    border: 1px solid transparent;
+    background: #F8FAFC;
+    border-radius: 4px;
+}
+input:focus, select:focus, textarea:focus {
+    outline: 1px solid #0048D9;
+    border-radius: 4px;
+}
+
+/* Index page style */
+
+.person-info {
+    width: 25rem;
+    position: fixed;
+    left: 22.5rem;
+    top: 0;
+    z-index: 5;
+    background-color: #86A3B4;
+}
+.person-info header::after {
+    content: '';
+    display: block;
+    width: 290px;
+    height: 6px;
+    background-color: #1E1E1E;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.person-info h3.person-header {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 1px;
+}
+.person-info .person-name {
+    padding: 40px 85px 20px 40px;
+}
+.person-info .person-name h2.name {
+    font-size: 40px;
+    color: #fff;
+    line-height: 48px;
+    letter-spacing: 1px;
+}
+.person-info .person-name span.surname {
+    color: #1C2E8C;
+}
+.person-info .person-photo img {
+    width: 100%;
+}
+.person-info .person-contact-info {
+    padding: 30px 30px 0 41px;
+}
+.person-info .person-contact-info section h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+}
+.person-info .person-contact-info section p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 20px 0;
+}
+.person-info .person-contact-info section a {
+    display: block;
+    margin: 0 0 20px 0;
+}
+.person-info .person-contact-info section a.linkedin-link {
+    display: block;
+}
+.person-info .person-languages {
+    padding: 0 50px 36px 41px;
+}
+.person-info .person-languages h3.language {
+    margin: 5px 0;
+}
+.person-content {
+    width: 50rem;
+    position: absolute;
+    left: calc(38.625%);
+    padding: 58px 54px;
+    background: #fff;
+    border-right: 1px solid #B8BCCA;
+    box-sizing: border-box;
+}
+.person-content .person-skills, .person-content .person-work-experience, .person-content .person-education {
+    margin-top: 57px;
+}
+.person-content h2.person-header {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 1px;
+}
+.person-content header::after {
+    content: '';
+    display: block;
+    width: 660px;
+    height: 5px;
+    background-color: #1E1E1E;
+    margin: 24px 0;
+}
+.person-content .person-summary p {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: justify;
+}
+.person-content .person-work-experience p.person-content-p {
+    font-size: 14px;
+    line-height: 17px;
+}
+.person-content .person-skills .skills-lists-container {
+    display: flex;
+}
+.person-content .person-skills .skills-lists-container ul.first-skills-list, .person-content .person-skills .skills-lists-container ul.second-skills-list {
+    flex-grow: 1;
+    padding-left: 30px;
+    margin: 0;
+}
+.person-content .person-skills .skills-lists-container ul.first-skills-list li, .person-content .person-skills .skills-lists-container ul.second-skills-list li {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
+.person-content .person-form-link-container {
+    text-align: center;
+    margin: 40px 0;
+}
+.person-content .person-form-link-container a.form-link {
+    background-color: #7B61FF;
+    border: none;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 6px;
+}
+.person-content .person-form-link-container a.form-link:hover {
+    cursor: pointer;
+    background-color: #002266;
+    transition: 300ms ease all;
+}
+
+/* Hire me page style */
+
+.container {
+    width: 1024px;
+    position: absolute;
+    left: calc(50% - 512px);
+    top: calc(50% - 448px);
+}
+.container .hire-form-body {
+    width: 500px;
+    position: absolute;
+    left: calc(50% - 250px);
+}
+.container .hire-form-body .hire-form-head {
+    text-align: center;
+}
+.container .hire-form-body .hire-form-head .title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    color: #0048D9;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.container .hire-form-body .hire-form-head .subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    color: #6F7482;
+    margin-bottom: 30px;
+}
+.container .hire-form-body .contact-info {
+    margin-bottom: 30px;
+}
+.container .hire-form-body .contact-info table.contact-info-table {
+    padding: 8px 0;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #0048D9;
+}
+.container .hire-form-body .contact-info table.contact-info-table tr, .container .hire-form-body .contact-info table.contact-info-table td {
+    padding: 12px;
+    color: #0048D9;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.container .hire-form-body .contact-info table.contact-info-table td.phone {
+    position: relative;
+    padding-left: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+.container .hire-form-body .contact-info table.contact-info-table td.phone::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    background-image: url(../img/icons/phone.png);
+}
+.container .hire-form-body .contact-info table.contact-info-table td.address {
+    color: #6F7482;
+    position: relative;
+    padding-left: 75px;
+    text-align: center;
+    font-weight: bold;
+}
+.container .hire-form-body .contact-info table.contact-info-table td.address::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 4px;
+    left: 18px;
+    background-image: url(../img/icons/map.png);
+}
+.container .hire-form-body .contact-info table.contact-info-table td.address ~ td {
+    color: #6F7482;
+}
+.container .hire-form-body .notice {
+    text-align: center;
+}
+.container .hire-form-body .notice h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    color: #6F7482;
+}
+.container .hire-form-body .contact-form {
+    margin-top: 30px;
+}
+.container .hire-form-body .contact-form #hire-me-form {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 16px;
+    border: 1px solid #0048D9;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container {
+    margin: 0 0 32px 0;
+    position: relative;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"] {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #3B4256;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #B8BCCA;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:focus:invalid {
+    outline: 1px solid #0048D9;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid {
+    outline: 1px solid #ED0131;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid ~ .err::after {
+    display: block;
+    position: absolute;
+    content: attr(data-text);
+    margin-top: 5px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ED0131;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 300ms all ease;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"] .err {
+    position: relative;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container {
+    margin: 32px 0;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea {
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-top: 15px;
+    width: 100%;
+    height: 170px;
+    font-size: 16px;
+    padding: 12px;
+    box-sizing: border-box;
+    resize: none;
+    color: #3B4256;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #B8BCCA;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container {
+    margin: 32px 0;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container select {
+    background: url('../img/icons/vector.png') no-repeat center right 17px, #F8FAFC;
+    margin-top: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #6F7482;
+    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container select:hover {
+    cursor: pointer;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn {
+    background-color: #7B61FF;
+    border: none;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 6px;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn:hover {
+    cursor: pointer;
+    background-color: #002266;
+    transition: 300ms ease all;
+}

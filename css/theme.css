@@ -1,0 +1,43 @@
+.my_theme {
+    /* Colors */
+    --font-color-of-primary: #1E1E1E;
+    --font-color-of-secondary: #6F7482;
+    --font-color-form-acccent: #0048D9;
+    --font-form-color: #3B4256;
+    --font-form-placeholder-color: #B8BCCA;
+    --font-color-form-error: #ED0131;
+    --font-color-surname: #ffd60a;
+    --input-background-color: #F8FAFC;
+    --link-color: #c8b6ff;
+    --button-background-color: #003566;
+    --button-hover-color: #ffd60a;
+    --person-info-background-color: #003566;
+    --person-content-background-color: #90e0ef;
+}
+
+.my_theme .person-info .person-languages h3.language, .my_theme .person-info h3.person-header, .my_theme .person-info .person-contact-info section h4, .my_theme .person-info .person-contact-info section p {
+    color: #fff;
+}
+
+.my_theme .person-info header::after {
+    background-color: var(--font-color-surname);
+}
+
+.my_theme .person-content header::after {
+    background-color: var(--person-info-background-color);
+}
+
+.my_theme .person-content h2, .my_theme .person-content p {
+    color: var(--person-info-background-color);
+}
+
+.my_theme .person-content .person-work-experience p.person-content-p {
+    font-size: var(--font-size-medium);
+}
+
+.my_theme .person-content .person-form-link-container a.form-link:hover {
+    border: 1px solid var(--person-info-background-color);
+    color: var(--person-info-background-color);
+    border-radius: 6px;
+    letter-spacing: 1px;
+}

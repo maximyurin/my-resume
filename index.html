@@ -111,5 +111,22 @@
                 <a href="../hire-me.html" class="form-link">Hire me</a>
             </div>
         </div>
+        <div class="check_themes_buttons">
+            <span class="check_themes_buttons_info">Changing the theme</span>
+            <button onclick="mainTheme()" class="main_theme">Main theme</button>
+            <button onclick="myTheme()" class="my__theme">My theme</button>
+        </div>
+        <script>
+            function mainTheme() {
+                const element = document.body;
+                element.classList.remove("my_theme");
+                element.classList.add("main_theme")
+            }
+            function myTheme() {
+                const element = document.body;
+                element.classList.remove("main_theme");
+                element.classList.add("my_theme")
+            }
+        </script>
     </body>
 </html>

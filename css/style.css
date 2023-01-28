@@ -108,7 +108,7 @@ input:focus, select:focus, textarea:focus {
     margin-bottom: 10px;
 }
 .person-info h3.person-header {
-    font-size: var(--font-size-xlarge);
+    font-size: calc(var(--font-size-xlarge) - 4px);
     line-height: 38px;
     letter-spacing: var(--font-letter-spacing);
 }
@@ -129,11 +129,11 @@ input:focus, select:focus, textarea:focus {
     width: 100%;
 }
 .person-info .person-contact-info {
-    padding: var(--margin-padding-xlarge) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
+    padding: var(--margin-padding-medium) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
 }
 .person-info .person-contact-info section h4 {
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-large);
+    font-size: calc(var(--font-size-large) - 4px);
     line-height: var(--margin-padding-large);
 }
 .person-info .person-contact-info .person-address {
@@ -161,6 +161,7 @@ input:focus, select:focus, textarea:focus {
     margin-bottom: var(--margin-padding-medium);
 }
 .person-info .person-languages h3.language {
+    font-size: calc(var(--font-size-large) - 4px);
     font-family: var(--font-family-primary);
     margin: 5px 0;
 }
@@ -168,7 +169,7 @@ input:focus, select:focus, textarea:focus {
     width: 50rem;
     position: absolute;
     left: calc(38.625%);
-    padding: 58px 54px;
+    padding: 40px 54px;
     background: var(--person-content-background-color);
     border-right: 1px solid var(--font-form-placeholder-color);
     box-sizing: border-box;

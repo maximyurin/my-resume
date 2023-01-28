@@ -434,6 +434,7 @@ input:focus, select:focus, textarea:focus {
     font-size: 18px;
     line-height: 23px;
     border-radius: 6px;
+    transition: 300ms ease all;
 }
 .container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn:hover {
     cursor: pointer;

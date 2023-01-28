@@ -133,7 +133,7 @@ body.my_theme {
     color: var(--font-color-of-primary);
     padding: var(--margin-padding-xsmall) var(--margin-padding-small);
     font-size: 18px;
-    line-height: 23px;
+    line-height: 22px;
     border-radius: 6px;
 }
 

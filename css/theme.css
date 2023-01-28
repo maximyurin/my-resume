@@ -5,7 +5,7 @@
     --font-color-form-acccent: #0048D9;
     --font-form-color: #3B4256;
     --font-form-placeholder-color: #B8BCCA;
-    --font-color-form-error: #ED0131;
+    --font-color-form-error: #f77f00;
     --font-color-surname: #ffd60a;
     --input-background-color: #F8FAFC;
     --link-color: #c8b6ff;
@@ -15,12 +15,20 @@
     --person-content-background-color: #90e0ef;
 }
 
+body.my_theme {
+    background: var(--person-content-background-color);
+}
+
 .my_theme .person-info .person-languages h3.language, .my_theme .person-info h3.person-header, .my_theme .person-info .person-contact-info section h4, .my_theme .person-info .person-contact-info section p {
     color: #fff;
 }
 
 .my_theme .person-info header::after {
     background-color: var(--font-color-surname);
+}
+
+.my_theme .person-content {
+    border-right: 1px solid var(--person-info-background-color);
 }
 
 .my_theme .person-content header::after {
@@ -77,12 +85,25 @@
     border-radius: 4px;
 }
 
+.my_theme input:focus, .my_theme select:focus, .my_theme textarea:focus {
+    outline: 2px solid var(--button-hover-color);
+    border-radius: 4px;
+}
+
 .my_theme .container .hire-form-body .contact-form #hire-me-form {
     background: var(--person-info-background-color);
 }
 
 .my_theme .container .hire-form-body .contact-form #hire-me-form label {
     color: var(--person-content-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid {
+    outline: 2px solid var(--font-color-form-error);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:focus:invalid {
+    outline: 2px solid var(--font-color-surname);
 }
 
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid ~ .err::after {

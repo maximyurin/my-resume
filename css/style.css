@@ -50,7 +50,9 @@
 /* End variables */
 
 /* Reset styles */
-
+body.main_theme {
+    background: #fff;
+}
 body {
     margin: 0;
     padding: 0;
@@ -445,7 +447,7 @@ input:focus, select:focus, textarea:focus {
 .check_themes_buttons {
     position: fixed;
     top: 3rem;
-    left: 3.45rem;
+    left: 4rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -479,7 +481,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .check_themes_buttons .main_theme:hover {
-    background-color: var(--button-hover-color);
+    background-color: #003566;
     border: none;
     cursor: pointer;
     transition: 300ms ease all;
@@ -501,7 +503,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .check_themes_buttons .my__theme:hover {
-    background-color: var(--button-hover-color);
+    background-color: #003566;
     border: none;
     cursor: pointer;
     color: #ffd60a;

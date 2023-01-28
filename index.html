@@ -112,17 +112,17 @@
             </div>
         </div>
         <div class="check_themes_buttons">
-            <span class="check_themes_buttons_info">Changing the theme</span>
+            <span class="check_themes_buttons_info">Change the theme</span>
             <button onclick="mainTheme()" class="main_theme">Main theme</button>
             <button onclick="myTheme()" class="my__theme">My theme</button>
         </div>
         <script>
-            function mainTheme() {
+            const mainTheme = () => {
                 const element = document.body;
                 element.classList.remove("my_theme");
                 element.classList.add("main_theme")
             }
-            function myTheme() {
+            const myTheme = () => {
                 const element = document.body;
                 element.classList.remove("main_theme");
                 element.classList.add("my_theme")

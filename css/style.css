@@ -45,6 +45,7 @@
     --button-hover-color: #002266;
     --person-info-background-color: #86A3B4;
     --person-content-background-color: #fff;
+    --form-background-color: #fff;
 }
 
 /* End variables */
@@ -90,13 +91,20 @@ input:focus, select:focus, textarea:focus {
 
 /* Index page style */
 
+.grid  {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    grid-template-areas: "info content";
+}
+
 .person-info {
     width: 25rem;
-    position: fixed;
-    left: 22.5rem;
-    top: 0;
     z-index: 5;
-    background-color: var(--person-info-background-color)
+    background-color: var(--person-info-background-color);
+    grid-area: info;
 }
 .person-info header::after {
     content: '';
@@ -167,12 +175,11 @@ input:focus, select:focus, textarea:focus {
 }
 .person-content {
     width: 50rem;
-    position: absolute;
-    left: calc(38.625%);
     padding: 40px 54px;
     background: var(--person-content-background-color);
     border-right: 1px solid var(--font-form-placeholder-color);
     box-sizing: border-box;
+    grid-area: content;
 }
 .person-content .person-skills, .person-content .person-work-experience, .person-content .person-education {
     margin-top: 57px;
@@ -446,11 +453,12 @@ input:focus, select:focus, textarea:focus {
 }
 
 .check_themes_buttons {
+    display: none;
     position: fixed;
     top: 3rem;
     left: 4rem;
     box-sizing: border-box;
-    display: flex;
+   /*display: flex;*/
     flex-direction: column;
     height: 10rem;
     justify-content: space-between;
@@ -509,4 +517,22 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     color: #ffd60a;
     transition: 300ms ease all;
+}
+
+@media screen and (max-width: 700px)  {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr;
+        grid-template-areas:
+        "info"
+        "content"
+    ;
+    }
+    .person-info {
+        width: 100%;
+    }
+    .person-content {
+        width: 100%;
+        border-right: none;
+    }
 }

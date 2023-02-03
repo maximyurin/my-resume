@@ -135,6 +135,7 @@ input:focus, select:focus, textarea:focus {
 }
 .person-info .person-photo img {
     width: 100%;
+    transition: 300ms ease all;
 }
 .person-info .person-contact-info {
     padding: var(--margin-padding-medium) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
@@ -209,6 +210,13 @@ input:focus, select:focus, textarea:focus {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-medium);
     line-height: 17px;
+}
+.person-content .person-work-experience p.person-content-p-old {
+    opacity: .7;
+}
+.person-content .person-work-experience p.person-content-p-old:hover {
+    opacity: 1;
+    transition: all 200ms ease;
 }
 .person-content .person-skills .skills-lists-container {
     display: flex;
@@ -517,6 +525,17 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     color: #ffd60a;
     transition: 300ms ease all;
+}
+
+@media screen and (min-width: 700px) {
+    .person-info .person-photo img:hover {
+        transform: scale(125%);
+        box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.76);
+        transition: 300ms ease all;
+    }
+    .person-info {
+        box-shadow: -1px 2px 10px 5px rgba(78,98,109,0.84);
+    }
 }
 
 @media screen and (max-width: 700px)  {

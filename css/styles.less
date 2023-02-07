@@ -348,10 +348,10 @@ body {
                 position: relative;
               }
             }
-
           }
           .form-textarea-container {
             margin: 32px 0;
+            position: relative;
             label {
               .basic-font2-options();
               font-size: 16px;
@@ -372,6 +372,21 @@ body {
                 letter-spacing: 1px;
                 color: @light_grey_color;
               }
+            }
+            span.success {
+              content: 'Success';
+              font-family: @font2;
+              color: #0E6245;
+              font-size: 12px;
+              letter-spacing: 1px;
+              transition: 300ms all ease;
+              display: inline-block;
+              position: absolute;
+              top: 210px;
+              left: 0;
+            }
+            span.hide {
+              display: none;
             }
           }
           .form-select-container {

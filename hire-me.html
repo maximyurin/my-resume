@@ -34,11 +34,11 @@
                                 <label for="contact-email">Email *</label>
                                 <input type="email" id="contact-email" placeholder="Please enter your Email" required>
                                 <span data-text="Please enter a valid Email address" class="err"></span>
+                                <span id="success_message" class="success">Success</span>
                             </div>
                             <div class="form-textarea-container">
                                 <label for="contact-text">Description</label>
                                 <textarea name="description" id="contact-text" placeholder="Please enter a description of your offer"></textarea>
-                                <span id="success_message" class="success hide">Success</span>
                             </div>
                             <div class="form-select-container">
                                 <label for="select-work-type">Work type</label>
@@ -56,16 +56,4 @@
             </div>
         </div>
     </body>
-    <script>
-        const form = document.getElementById("hire-me-form");
-        const successMessage = document.getElementById("success_message");
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            if (form.checkValidity() === true) {
-                successMessage.classList.remove("hide");
-            } else if (form.checkValidity() === false) {
-                successMessage.classList.add("hide");
-            }
-        });
-    </script>
 </html>

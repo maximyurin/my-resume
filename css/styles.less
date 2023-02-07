@@ -344,9 +344,26 @@ body {
                   transition: 300ms all ease;
                 }
               }
+              &:valid {
+                & ~ .success {
+                  display: inline-block;
+                }
+              }
               .err {
                 position: relative;
               }
+            }
+            .success {
+              content: 'Success';
+              font-family: @font2;
+              color: #0E6245;
+              font-size: 12px;
+              letter-spacing: 1px;
+              transition: 300ms all ease;
+              display: none;
+              position: absolute;
+              top: 86px;
+              left: 0;
             }
           }
           .form-textarea-container {
@@ -372,21 +389,6 @@ body {
                 letter-spacing: 1px;
                 color: @light_grey_color;
               }
-            }
-            span.success {
-              content: 'Success';
-              font-family: @font2;
-              color: #0E6245;
-              font-size: 12px;
-              letter-spacing: 1px;
-              transition: 300ms all ease;
-              display: inline-block;
-              position: absolute;
-              top: 210px;
-              left: 0;
-            }
-            span.hide {
-              display: none;
             }
           }
           .form-select-container {

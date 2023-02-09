@@ -1,0 +1,53 @@
+@import "main_theme_variables";
+@import "my_theme_variables";
+
+/* Fonts */
+@font-face {
+  font-family: Inter, sans-serif;
+  src: url(../fonts/inter/Inter-VariableFont.ttf);
+}
+@font-face {
+  font-family: 'IBM Plex Sans', sans-serif;
+  src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+}
+/* Reset styles */
+body.main_theme {
+  background: #fff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-primary);
+  color: var(--font-color-of-primary);
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--font-color-of-primary);
+}
+a {
+  font-family: Inter, sans-serif;
+  color: var(--link-color);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+input, select, textarea {
+  appearance: none;
+  margin: 0;
+  border: 1px solid transparent;
+  background: var(--input-background-color);
+  border-radius: 4px;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 1px solid var(--font-color-form-acccent);
+  border-radius: 4px;
+}
+
+
+@import "my_theme";

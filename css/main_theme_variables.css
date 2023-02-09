@@ -1,0 +1,42 @@
+/* Variables */
+:root {
+  /* Font */
+  --font-family-primary: Inter, sans-serif;
+  --font-family-secondary: "IBM Plex Sans", sans-serif;
+  --font-size-xsmall: 12px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --font-size-xlarge: 32px;
+  --font-size-xxlarge: 36px;
+  --font-size-xxxlarge: 40px;
+  --font-letter-spacing: 1px;
+  /* Margin & padding */
+  --margin-padding-xsmall: 12px;
+  --margin-padding-small: 16px;
+  --margin-padding-medium: 20px;
+  --margin-padding-large: 30px;
+  --margin-padding-xlarge: 40px;
+}
+
+.main_theme {
+  /* Colors */
+  --font-color-of-primary: #1E1E1E;
+  --font-color-of-secondary: #6F7482;
+  --font-color-form-acccent: #0048D9;
+  --font-form-color: #3B4256;
+  --font-form-placeholder-color: #B8BCCA;
+  --font-color-form-error: #ED0131;
+  --font-color-surname: #1C2E8C;
+  --input-background-color: #F8FAFC;
+  --link-color: #1C2E8C;
+  --button-background-color: #7B61FF;
+  --button-hover-color: #002266;
+  --person-info-background-color: #86A3B4;
+  --person-content-background-color: #fff;
+  --form-background-color: #fff;
+}
+
+/* End variables */
+
+/*# sourceMappingURL=main_theme_variables.css.map */

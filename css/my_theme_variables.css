@@ -1,0 +1,18 @@
+.my_theme {
+  /* Colors */
+  --font-color-of-primary: #1E1E1E;
+  --font-color-of-secondary: #6F7482;
+  --font-color-form-acccent: #0048D9;
+  --font-form-color: #3B4256;
+  --font-form-placeholder-color: #B8BCCA;
+  --font-color-form-error: #f77f00;
+  --font-color-surname: #ffd60a;
+  --input-background-color: #F8FAFC;
+  --link-color: #c8b6ff;
+  --button-background-color: #003566;
+  --button-hover-color: #ffd60a;
+  --person-info-background-color: #003566;
+  --person-content-background-color: #90e0ef;
+}
+
+/*# sourceMappingURL=my_theme_variables.css.map */

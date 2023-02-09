@@ -1,0 +1,128 @@
+body.my_theme {
+  background: var(--person-content-background-color);
+}
+
+.my_theme .person-info .person-languages h3.language, .my_theme .person-info h3.person-header, .my_theme .person-info .person-contact-info section h4, .my_theme .person-info .person-contact-info section p {
+  color: #fff;
+}
+
+.my_theme .person-info header::after {
+  background-color: var(--font-color-surname);
+}
+
+.my_theme .person-content {
+  border-right: 1px solid var(--person-info-background-color);
+}
+
+.my_theme .person-content header::after {
+  background-color: var(--person-info-background-color);
+}
+
+.my_theme .person-content h2, .my_theme .person-content p {
+  color: var(--person-info-background-color);
+}
+
+.my_theme .person-content .person-work-experience p.person-content-p {
+  font-size: var(--font-size-medium);
+}
+
+.my_theme .person-content .person-form-link-container a.form-link:hover {
+  border: 1px solid var(--person-info-background-color);
+  color: var(--person-info-background-color);
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.my_theme .container .hire-form-body .hire-form-head .title, .my_theme .container .hire-form-body .hire-form-head .subtitle {
+  color: var(--person-info-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-info table.contact-info-table {
+  background: var(--person-info-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-info table.contact-info-table tr, .my_theme .container .hire-form-body .contact-info table.contact-info-table td {
+  color: var(--person-content-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-info table.contact-info-table td.phone::after {
+  background-image: url(../img/icons/phone-icon-my-theme.png);
+}
+
+.my_theme .container .hire-form-body .contact-info table.contact-info-table td.address::after {
+  background-image: url(../img/icons/map-icon-my-theme.png);
+}
+.my_theme .container .hire-form-body .contact-info table.contact-info-table td.address ~ td {
+  color: var(--person-content-background-color);
+}
+
+.my_theme .container .hire-form-body .notice h2 {
+  color: var(--person-info-background-color);
+}
+
+.my_theme input, .my_theme select, .my_theme textarea {
+  appearance: none;
+  margin: 0;
+  border: 1px solid transparent;
+  background: var(--person-content-background-color);
+  border-radius: 4px;
+}
+
+.my_theme input:focus, .my_theme select:focus, .my_theme textarea:focus {
+  outline: 2px solid var(--button-hover-color);
+  border-radius: 4px;
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form {
+  background: var(--person-info-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form label {
+  color: var(--person-content-background-color);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid {
+  outline: 2px solid var(--font-color-form-error);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:focus:invalid {
+  outline: 2px solid var(--font-color-surname);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]:invalid ~ .err::after {
+  color: var(--font-color-surname);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type="email"]::placeholder, .my_theme .container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea::placeholder {
+  color: var(--font-color-of-primary)
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-select-container select {
+  color: var(--font-color-of-primary);
+  background: url('../img/icons/vector.png') no-repeat center right 17px, var(--person-content-background-color);
+  margin-top: 15px;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-medium);
+  width: 100%;
+  padding: var(--margin-padding-xsmall);
+  line-height: 24px;
+  letter-spacing: var(--font-letter-spacing);
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn {
+  background-color: var(--font-color-surname);
+  border: none;
+  font-weight: 500;
+  color: var(--font-color-of-primary);
+  padding: var(--margin-padding-xsmall) var(--margin-padding-small);
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 6px;
+}
+
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn:hover {
+  cursor: pointer;
+  background-color: var(--person-content-background-color);
+  transition: 300ms ease all;
+  letter-spacing: 2px;
+}

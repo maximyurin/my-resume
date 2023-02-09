@@ -1,5 +1,4 @@
 /* Fonts */
-
 @font-face {
     font-family: Inter, sans-serif;
     src: url(../fonts/inter/Inter-VariableFont.ttf);
@@ -8,7 +7,6 @@
     font-family: 'IBM Plex Sans', sans-serif;
     src: url(../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
 }
-
 /* Variables */
 :root {
     /* Font */
@@ -29,7 +27,6 @@
     --margin-padding-large: 30px;
     --margin-padding-xlarge: 40px;
 }
-
 .main_theme {
     /* Colors */
     --font-color-of-primary: #1E1E1E;
@@ -47,9 +44,7 @@
     --person-content-background-color: #fff;
     --form-background-color: #fff;
 }
-
 /* End variables */
-
 /* Reset styles */
 body.main_theme {
     background: #fff;
@@ -88,9 +83,7 @@ input:focus, select:focus, textarea:focus {
     outline: 1px solid var(--font-color-form-acccent);
     border-radius: 4px;
 }
-
 /* Index page style */
-
 .grid  {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -99,7 +92,42 @@ input:focus, select:focus, textarea:focus {
     margin: 0 auto;
     grid-template-areas: "info content";
 }
-
+.person-info > div {
+    animation-name: person;
+    animation-duration: 800ms;
+    animation-timing-function: linear;
+}
+.person-content > div {
+    animation-name: person;
+    animation-duration: 1300ms;
+    animation-timing-function: linear;
+}
+@keyframes person {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(80px);
+        opacity: .2;
+    }
+    40% {
+        transform: translateY(60px);
+        opacity: .4;
+    }
+    60% {
+        transform: translateY(40px);
+        opacity: .6;
+    }
+    80% {
+        transform: translateY(20px);
+        opacity: .8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .person-info {
     width: 25rem;
     z-index: 5;
@@ -135,6 +163,26 @@ input:focus, select:focus, textarea:focus {
 }
 .person-info .person-photo img {
     width: 100%;
+    display: block;
+}
+.person-info .person-photo img:hover {
+    animation-name: photo;
+    animation-duration: 800ms;
+    animation-timing-function: linear;
+}
+@keyframes photo {
+    0% {
+        transform: scale(100%);
+    }
+    40% {
+        transform: scale(140%);
+    }
+    60% {
+        transform: scale(140%);
+    }
+    100% {
+        transform: scale(100%);
+    }
 }
 .person-info .person-contact-info {
     padding: var(--margin-padding-medium) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
@@ -210,6 +258,15 @@ input:focus, select:focus, textarea:focus {
     font-size: var(--font-size-medium);
     line-height: 17px;
 }
+.person-content .person-work-experience p.person-content-past:hover {
+    opacity: 1;
+    transition: 700ms all linear;
+}
+.person-content .person-work-experience p.person-content-past {
+    opacity: 0.4;
+    transition: 700ms all linear;
+}
+
 .person-content .person-skills .skills-lists-container {
     display: flex;
 }
@@ -244,9 +301,7 @@ input:focus, select:focus, textarea:focus {
     background-color: var(--button-hover-color);
     transition: 300ms ease all;
 }
-
 /* Hire me page style */
-
 .container {
     width: 1024px;
     position: absolute;
@@ -257,6 +312,10 @@ input:focus, select:focus, textarea:focus {
     width: 500px;
     position: absolute;
     left: calc(50% - 250px);
+    animation-name: form;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    transition: 300ms all ease-in-out;
 }
 .container .hire-form-body .hire-form-head {
     text-align: center;
@@ -331,6 +390,32 @@ input:focus, select:focus, textarea:focus {
 }
 .container .hire-form-body .contact-form {
     margin-top: var(--margin-padding-large);
+}
+@keyframes form {
+    0% {
+        transform: scale(200%);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(180%);
+        opacity: .2;
+    }
+    40% {
+        transform: scale(160%);
+        opacity: .4;
+    }
+    60% {
+        transform: scale(140%);
+        opacity: .6;
+    }
+    80% {
+        transform: scale(120%);
+        opacity: .8;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }
 }
 .container .hire-form-body .contact-form #hire-me-form {
     font-family: var(--font-family-secondary);
@@ -451,7 +536,6 @@ input:focus, select:focus, textarea:focus {
     background-color: var(--button-hover-color);
     transition: 300ms ease all;
 }
-
 .check_themes_buttons {
     display: none;
     position: fixed;
@@ -464,7 +548,6 @@ input:focus, select:focus, textarea:focus {
     justify-content: space-between;
     justify-items: center;
 }
-
 .check_themes_buttons .check_themes_buttons_info {
     display: inline-block;
     font-size: 20px;
@@ -473,7 +556,6 @@ input:focus, select:focus, textarea:focus {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
 .check_themes_buttons .main_theme {
     background-color: var(--button-background-color);
     border: none;

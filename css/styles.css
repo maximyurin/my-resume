@@ -55,6 +55,7 @@
   --person-content-background-color: #90e0ef;
 }
 
+/* Animation function */
 /* Fonts */
 @font-face {
   font-family: Inter, sans-serif;
@@ -109,106 +110,567 @@ input:focus, select:focus, textarea:focus {
   border-radius: 4px;
 }
 
+/* Index page styles */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  grid-template-areas: "info content";
+}
+.grid .person-info {
+  width: 25rem;
+  z-index: 5;
+  background-color: var(--person-info-background-color);
+  grid-area: info;
+}
+.grid .person-info > div {
+  animation-name: person;
+  animation-duration: 800ms;
+  animation-timing-function: linear;
+}
+.grid .person-info header::after {
+  content: "";
+  display: block;
+  width: 290px;
+  height: 6px;
+  background-color: var(--font-color-of-primary);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.grid .person-info .person-header {
+  font-size: calc(var(--font-size-xlarge) - 4px);
+  line-height: 38px;
+  letter-spacing: var(--font-letter-spacing);
+}
+.grid .person-info .person-name {
+  padding: var(--margin-padding-medium) 85px var(--margin-padding-medium) var(--margin-padding-xlarge);
+}
+.grid .person-info .person-name .name {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxxlarge);
+  color: #fff;
+  line-height: 48px;
+  letter-spacing: var(--font-letter-spacing);
+}
+.grid .person-info .person-name .surname {
+  color: var(--font-color-surname);
+}
+.grid .person-info .person-photo img {
+  width: 100%;
+  display: block;
+}
+.grid .person-info .person-photo img:hover {
+  animation-name: photo;
+  animation-duration: 800ms;
+  animation-timing-function: linear;
+}
+.grid .person-info .person-contact-info {
+  padding: var(--margin-padding-medium) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
+}
+.grid .person-info .person-contact-info section h4 {
+  font-family: var(--font-family-primary);
+  font-size: calc(var(--font-size-large) - 4px);
+  line-height: var(--margin-padding-large);
+}
+.grid .person-info .person-contact-info section .person-address {
+  margin-top: var(--margin-padding-medium);
+}
+.grid .person-info .person-contact-info section p {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 0 var(--margin-padding-medium) 0;
+}
+.grid .person-info .person-contact-info section a {
+  font-family: var(--font-family-primary);
+  display: block;
+  margin: 0 0 var(--margin-padding-medium) 0;
+}
+.grid .person-info .person-contact-info section .linkedin-link {
+  display: block;
+}
+.grid .person-info .person-languages {
+  padding: 0 var(--margin-padding-xlarge) var(--margin-padding-xlarge) var(--margin-padding-xlarge);
+}
+.grid .person-info .person-languages header {
+  margin-bottom: var(--margin-padding-medium);
+}
+.grid .person-info .person-languages .language {
+  font-size: calc(var(--font-size-large) - 4px);
+  font-family: var(--font-family-primary);
+  margin: 5px 0;
+}
+.grid .person-content {
+  width: 50rem;
+  padding: 40px 54px;
+  background: var(--person-content-background-color);
+  border-right: 1px solid var(--font-form-placeholder-color);
+  box-sizing: border-box;
+  grid-area: content;
+}
+.grid .person-content > div {
+  animation-name: person;
+  animation-duration: 1300ms;
+  animation-timing-function: linear;
+}
+.grid .person-content .person-skills, .grid .person-content .person-work-experience, .grid .person-content .person-education {
+  margin-top: 57px;
+}
+.grid .person-content .person-header {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xxlarge);
+  line-height: 44px;
+  letter-spacing: var(--font-letter-spacing);
+}
+.grid .person-content .person-header::after {
+  content: "";
+  display: block;
+  width: 660px;
+  height: 5px;
+  background-color: var(--font-color-of-primary);
+  margin: 24px 0;
+}
+.grid .person-content .person-summary p {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  line-height: 20px;
+  text-align: justify;
+}
+.grid .person-content .person-work-experience .person-content-p {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  line-height: 17px;
+}
+.grid .person-content .person-work-experience .person-content-past {
+  opacity: 0.4;
+  transition: 700ms all linear;
+}
+.grid .person-content .person-work-experience .person-content-past:hover {
+  opacity: 1;
+  transition: 700ms all linear;
+}
+.grid .person-content .person-skills .skills-lists-container {
+  display: flex;
+}
+.grid .person-content .person-skills .skills-lists-container .first-skills-list, .grid .person-content .person-skills .skills-lists-container .second-skills-list {
+  flex-grow: 1;
+  padding-left: var(--margin-padding-large);
+  margin: 0;
+}
+.grid .person-content .person-skills .skills-lists-container .first-skills-list li, .grid .person-content .person-skills .skills-lists-container .second-skills-list li {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  line-height: 20px;
+}
+.grid .person-content .person-form-link-container {
+  text-align: center;
+  margin: var(--margin-padding-xlarge) 0;
+}
+.grid .person-content .person-form-link-container .form-link {
+  background-color: var(--button-background-color);
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  padding: var(--margin-padding-xsmall) var(--margin-padding-small);
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 6px;
+  transition: 300ms ease all;
+}
+.grid .person-content .person-form-link-container .form-link:hover {
+  cursor: pointer;
+  background-color: var(--button-hover-color);
+  transition: 300ms ease all;
+}
+
+/* Hire me page styles */
+.container {
+  width: 1024px;
+  position: absolute;
+  left: calc(50% - 512px);
+  top: calc(50% - 448px);
+}
+.container .hire-form-body {
+  width: 500px;
+  position: absolute;
+  left: calc(50% - 250px);
+  animation-name: form;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  transition: 300ms all ease-in-out;
+}
+.container .hire-form-body .hire-form-head {
+  text-align: center;
+}
+.container .hire-form-body .hire-form-head .title {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--font-color-form-acccent);
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: var(--margin-padding-medium);
+}
+.container .hire-form-body .hire-form-head .subtitle {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--font-color-of-secondary);
+  margin-bottom: var(--margin-padding-large);
+}
+.container .hire-form-body .contact-info {
+  margin-bottom: var(--margin-padding-large);
+}
+.container .hire-form-body .contact-info .contact-info-table {
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--font-color-form-acccent);
+}
+.container .hire-form-body .contact-info .contact-info-table tr, .container .hire-form-body .contact-info .contact-info-table td {
+  padding: 12px;
+  color: var(--font-color-form-acccent);
+  line-height: 24px;
+  letter-spacing: var(--font-letter-spacing);
+}
+.container .hire-form-body .contact-info .contact-info-table .phone {
+  position: relative;
+  padding-left: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+.container .hire-form-body .contact-info .contact-info-table .phone::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  background-image: url(../img/icons/phone.png);
+}
+.container .hire-form-body .contact-info .contact-info-table .address {
+  color: var(--font-color-of-secondary);
+  position: relative;
+  padding-left: 75px;
+  text-align: center;
+  font-weight: bold;
+}
+.container .hire-form-body .contact-info .contact-info-table .address::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  background-image: url(../img/icons/map.png);
+}
+.container .hire-form-body .contact-info .contact-info-table .address ~ td {
+  color: var(--font-color-of-secondary);
+}
+.container .hire-form-body .notice {
+  text-align: center;
+}
+.container .hire-form-body .notice h2 {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--font-color-of-secondary);
+}
+.container .hire-form-body .contact-form {
+  margin-top: var(--margin-padding-large);
+}
+.container .hire-form-body .contact-form #hire-me-form {
+  font-family: var(--font-family-secondary);
+  padding: var(--margin-padding-small);
+  border: 1px solid var(--font-color-form-acccent);
+  background: var(--form-background-color, #fff);
+  border-radius: 16px;
+  margin: 0 auto;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container {
+  margin: 0 0 var(--margin-padding-large) 0;
+  position: relative;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container label {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  font-size: var(--font-size-medium);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email] {
+  font-family: var(--font-family-secondary);
+  margin-top: var(--margin-padding-small);
+  width: 100%;
+  font-size: var(--font-size-medium);
+  padding: var(--margin-padding-xsmall);
+  box-sizing: border-box;
+  color: var(--font-form-color);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]::placeholder {
+  font-size: var(--font-size-medium);
+  line-height: 24px;
+  letter-spacing: var(--font-family-secondary);
+  color: var(--font-form-placeholder-color);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:focus:invalid {
+  outline: 1px solid var(--font-color-form-acccent);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:invalid {
+  outline: 1px solid var(--font-color-form-error);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:invalid ~ .err::after {
+  display: block;
+  position: absolute;
+  content: attr(data-text);
+  margin-top: 5px;
+  font-family: var(--font-family-secondary);
+  color: var(--font-color-form-error);
+  font-size: var(--font-size-xsmall);
+  letter-spacing: var(--font-letter-spacing);
+  transition: 300ms all ease;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email] .err {
+  position: relative;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container {
+  margin: var(--margin-padding-large) 0;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container label {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  font-size: var(--font-size-medium);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea {
+  font-family: var(--font-family-secondary);
+  margin-top: 15px;
+  width: 100%;
+  height: 170px;
+  font-size: var(--font-size-medium);
+  padding: var(--margin-padding-xsmall);
+  box-sizing: border-box;
+  resize: none;
+  color: var(--font-form-color);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea::placeholder {
+  font-size: var(--font-size-medium);
+  line-height: 24px;
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--font-form-placeholder-color);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container {
+  margin: var(--margin-padding-large) 0;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container label {
+  font-family: var(--font-family-secondary);
+  letter-spacing: var(--font-letter-spacing);
+  font-size: var(--font-size-medium);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container select {
+  background: url("../img/icons/vector.png") no-repeat center right 17px, #F8FAFC;
+  margin-top: 15px;
+  font-family: var(--font-family-secondary);
+  color: var(--font-color-of-secondary);
+  font-size: var(--font-size-medium);
+  width: 100%;
+  padding: var(--margin-padding-xsmall);
+  line-height: 24px;
+  letter-spacing: var(--font-letter-spacing);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-select-container select:hover {
+  cursor: pointer;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container {
+  text-align: center;
+  margin-top: var(--margin-padding-xlarge);
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn {
+  background-color: var(--button-background-color);
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  padding: var(--margin-padding-xsmall) var(--margin-padding-small);
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 6px;
+  transition: 300ms ease all;
+}
+.container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn:hover {
+  cursor: pointer;
+  background-color: var(--button-hover-color);
+  transition: 300ms ease all;
+}
+
+/* Media queries */
+@media screen and (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "info" "content";
+  }
+  .grid .person-info {
+    width: 100%;
+  }
+  .grid .person-content {
+    width: 100%;
+    border-right: none;
+  }
+}
+/* Animation keyframes */
+@keyframes person {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(80px);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(60px);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translateY(40px);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateY(20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes photo {
+  0% {
+    transform: scale(100%);
+  }
+  40% {
+    transform: scale(140%);
+  }
+  60% {
+    transform: scale(140%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes form {
+  0% {
+    transform: scale(200%);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(180%);
+    opacity: 0.2;
+  }
+  40% {
+    transform: scale(160%);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(140%);
+    opacity: 0.6;
+  }
+  80% {
+    transform: scale(120%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
 body.my_theme {
   background: var(--person-content-background-color);
 }
 
-.my_theme .person-info .person-languages h3.language, .my_theme .person-info h3.person-header, .my_theme .person-info .person-contact-info section h4, .my_theme .person-info .person-contact-info section p {
-  color: #fff;
-}
-
+/* Index page styles */
 .my_theme .person-info header::after {
   background-color: var(--font-color-surname);
 }
-
+.my_theme .person-info .person-languages .language {
+  color: #fff;
+}
+.my_theme .person-info .person-header {
+  color: #fff;
+}
+.my_theme .person-info .person-contact-info section h4 {
+  color: #fff;
+}
+.my_theme .person-info .person-contact-info section p {
+  color: #fff;
+}
 .my_theme .person-content {
   border-right: 1px solid var(--person-info-background-color);
 }
-
 .my_theme .person-content header::after {
   background-color: var(--person-info-background-color);
 }
-
 .my_theme .person-content h2, .my_theme .person-content p {
   color: var(--person-info-background-color);
 }
-
-.my_theme .person-content .person-work-experience p.person-content-p {
+.my_theme .person-content .person-work-experience .person-content-p {
   font-size: var(--font-size-medium);
 }
-
-.my_theme .person-content .person-form-link-container a.form-link:hover {
+.my_theme .person-content .person-form-link-container .form-link:hover {
   border: 1px solid var(--person-info-background-color);
   color: var(--person-info-background-color);
   border-radius: 6px;
   letter-spacing: 1px;
 }
 
+/* Hire me page styles */
 .my_theme .container .hire-form-body .hire-form-head .title, .my_theme .container .hire-form-body .hire-form-head .subtitle {
   color: var(--person-info-background-color);
 }
-
-.my_theme .container .hire-form-body .contact-info table.contact-info-table {
+.my_theme .container .hire-form-body .contact-info .contact-info-table {
   background: var(--person-info-background-color);
 }
-
-.my_theme .container .hire-form-body .contact-info table.contact-info-table tr, .my_theme .container .hire-form-body .contact-info table.contact-info-table td {
+.my_theme .container .hire-form-body .contact-info .contact-info-table tr, .my_theme .container .hire-form-body .contact-info .contact-info-table td {
   color: var(--person-content-background-color);
 }
-
-.my_theme .container .hire-form-body .contact-info table.contact-info-table td.phone::after {
+.my_theme .container .hire-form-body .contact-info .contact-info-table .phone::after {
   background-image: url(../img/icons/phone-icon-my-theme.png);
 }
-
-.my_theme .container .hire-form-body .contact-info table.contact-info-table td.address::after {
+.my_theme .container .hire-form-body .contact-info .contact-info-table .address::after {
   background-image: url(../img/icons/map-icon-my-theme.png);
 }
-
-.my_theme .container .hire-form-body .contact-info table.contact-info-table td.address ~ td {
+.my_theme .container .hire-form-body .contact-info .contact-info-table .address ~ td {
   color: var(--person-content-background-color);
 }
-
 .my_theme .container .hire-form-body .notice h2 {
   color: var(--person-info-background-color);
 }
-
-.my_theme input, .my_theme select, .my_theme textarea {
-  appearance: none;
-  margin: 0;
-  border: 1px solid transparent;
-  background: var(--person-content-background-color);
-  border-radius: 4px;
-}
-
-.my_theme input:focus, .my_theme select:focus, .my_theme textarea:focus {
-  outline: 2px solid var(--button-hover-color);
-  border-radius: 4px;
-}
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form {
   background: var(--person-info-background-color);
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form label {
   color: var(--person-content-background-color);
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:invalid {
   outline: 2px solid var(--font-color-form-error);
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:focus:invalid {
   outline: 2px solid var(--font-color-surname);
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]:invalid ~ .err::after {
   color: var(--font-color-surname);
 }
-
-.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container input[type=email]::placeholder, .my_theme .container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea::placeholder {
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-email-container::placeholder {
   color: var(--font-color-of-primary);
 }
-
+.my_theme .container .hire-form-body .contact-form #hire-me-form .form-textarea-container textarea::placeholder {
+  color: var(--font-color-of-primary);
+}
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-select-container select {
   color: var(--font-color-of-primary);
   background: url("../img/icons/vector.png") no-repeat center right 17px, var(--person-content-background-color);
@@ -220,7 +682,6 @@ body.my_theme {
   line-height: 24px;
   letter-spacing: var(--font-letter-spacing);
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn {
   background-color: var(--font-color-surname);
   border: none;
@@ -231,12 +692,22 @@ body.my_theme {
   line-height: 22px;
   border-radius: 6px;
 }
-
 .my_theme .container .hire-form-body .contact-form #hire-me-form .form-btn-container .form-btn:hover {
   cursor: pointer;
   background-color: var(--person-content-background-color);
   transition: 300ms ease all;
   letter-spacing: 2px;
+}
+.my_theme input, .my_theme select, .my_theme textarea {
+  appearance: none;
+  margin: 0;
+  border: 1px solid transparent;
+  background: var(--person-content-background-color);
+  border-radius: 4px;
+}
+.my_theme input input:focus, .my_theme input select:focus, .my_theme input textarea:focus, .my_theme select input:focus, .my_theme select select:focus, .my_theme select textarea:focus, .my_theme textarea input:focus, .my_theme textarea select:focus, .my_theme textarea textarea:focus {
+  outline: 2px solid var(--button-hover-color);
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=styles.css.map */

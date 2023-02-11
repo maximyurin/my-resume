@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>My hire form page</title>
 </head>
-    <body class="main_theme">
-        <div class="container">
-            <div class="hire-form-body">
-                <div class="hire-form-head">
-                    <h1 class="title text-3xl">To offer a job</h1>
-                    <h2 class="subtitle text-2xl">Contact information</h2>
+    <body class="main_theme min-h-screen flex justify-center items-center">
+        <div class="container w-1/3">
+            <div class="flex flex-col">
+                <div class="text-center">
+                    <h1 class="text-blue-800 text-4xl uppercase tracking-wide font-extrabold">To offer a job</h1>
+                    <h2 class="text-blue-800 text-3xl font-bold">Contact information</h2>
                 </div>
-                <div class="contact-info">
-                    <table class="contact-info-table">
-                        <tr>
-                            <td class="phone">Phone</td>
-                            <td>(066) 249 71 33 (Viber, Telegram)</td>
+                <div class="mt-10">
+                    <table class="bg-gray-300 shadow-md shadow-slate-500 border-2 border-solid border-blue-800 w-full overflow-hidden rounded-xl hover:bg-gray-400 transition-all duration-300 ease-linear">
+                        <tr class="border-solid border-b-2 border-white">
+                            <td class="phone-icon py-4 pl-24 pr-10 text-black font-extrabold text-lg uppercase text-left">Phone</td>
+                            <td class="py-4 px-5 font-bold text-blue-800 text-lg font-extrabold">(066) 249 71 33 (Viber, Telegram)</td>
                         </tr>
                         <tr>
-                            <td class="address">Address</td>
-                            <td>Kiev Region, Kriukivshchyna</td>
+                            <td class="address-icon py-4 pl-24 pr-10 text-black font-bold text-lg font-extrabold uppercase text-left">Address</td>
+                            <td class="py-4 px-5 font-bold text-blue-800 text-lg font-extrabold">Kiev Region, Kriukivshchyna</td>
                         </tr>
                     </table>
                 </div>
-                <div class="notice">
-                    <h2 class="text-2xl">Please fill out the form below</h2>
+                <div class="mt-10 text-center">
+                    <h2 class="text-blue-800 text-3xl font-bold">Please fill out the form below</h2>
                 </div>
                 <div class="mt-10">
-                    <form class="block bg-gray-300 p-6 rounded-2xl box-border shadow-md shadow-slate-500 border-2 border-solid border-blue-800 hover:bg-gray-400 transition-all duration-300 ease-linear" action="/forms" id="hire-me-form" method="get">
+                    <form class="block bg-gray-300 p-6 rounded-2xl box-border shadow-md shadow-slate-500 hover:bg-gray-400 transition-all duration-300 ease-linear" action="/forms" id="hire-me-form" method="get">
                             <div class="flex mb-6">
                                 <label class="text-lg text-blue-800 font-bold mr-12" for="contact-email">Email*</label>
                                 <input class="p-3 w-full ml-3 shadow-inner" type="email" id="contact-email" placeholder="Please enter your Email" required>
@@ -41,7 +41,7 @@
                             </div>
                             <div class="flex">
                                 <label class="text-lg text-blue-800 font-bold flex-none mr-1" for="select-work-type">Work type</label>
-                                <select style="background: url('./img/icons/vector.png') no-repeat center right 17px, #F8FAFC" name="selection" id="select-work-type" class="text-gray-900 text-base ml-6 p-3 w-full cursor-pointer shadow-inner">
+                                <select style="background: url('./img/icons/vector.png') no-repeat center right 15px, #F8FAFC" name="selection" id="select-work-type" class="text-gray-900 text-base ml-6 p-3 w-full cursor-pointer shadow-inner">
                                     <option value="Work in office">Work in office</option>
                                     <option value="Distant work">Distant work</option>
                                     <option value="One-time project">One-time project</option>

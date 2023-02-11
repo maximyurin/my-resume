@@ -238,117 +238,49 @@ input:focus, select:focus, textarea:focus {
     }
   }
 }
-/* Hire me page styles */
+
+/* Hire me page icons */
+
 .main_theme {
   .container {
-    width: 1024px;
-    position: absolute;
-    left: calc(50% - 512px);
-    top: calc(50% - 350px);
-
-    .hire-form-body {
-      width: 500px;
+    animation-name: form;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    transition: 300ms all ease-in-out;
+  }
+  .phone-icon {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 45px;
+      background-position: center center;
+      background-size: cover;
       position: absolute;
-      left: calc(50% - 250px);
-      animation-name: form;
-      animation-duration: 1000ms;
-      animation-timing-function: linear;
-      transition: 300ms all ease-in-out;
-
-      .hire-form-head {
-        text-align: center;
-
-        .title {
-          font-family: var(--font-family-secondary);
-          letter-spacing: var(--font-letter-spacing);
-          color: var(--font-color-form-acccent);
-          text-transform: uppercase;
-          font-weight: 900;
-          margin-bottom: var(--margin-padding-medium);
-        }
-
-        .subtitle {
-          font-family: var(--font-family-secondary);
-          letter-spacing: var(--font-letter-spacing);
-          color: var(--font-color-of-secondary);
-          margin-bottom: var(--margin-padding-large);
-        }
-      }
-
-      .contact-info {
-        margin-bottom: var(--margin-padding-large);
-
-        .contact-info-table {
-          padding: 8px 0;
-          width: 100%;
-
-          tr, td {
-            padding: 12px;
-            color: var(--font-color-form-acccent);
-            line-height: 24px;
-            letter-spacing: var(--font-letter-spacing);
-          }
-
-          .phone {
-            position: relative;
-            padding-left: 60px;
-            text-align: center;
-            font-weight: bold;
-
-            &::after {
-              content: '';
-              display: block;
-              width: 40px;
-              height: 40px;
-              background-position: center center;
-              background-size: cover;
-              position: absolute;
-              top: 4px;
-              left: 18px;
-              background-image: url(../img/icons/phone.png);
-            }
-          }
-
-          .address {
-            color: var(--font-color-of-secondary);
-            position: relative;
-            padding-left: 75px;
-            text-align: center;
-            font-weight: bold;
-
-            &::after {
-              content: '';
-              display: block;
-              width: 40px;
-              height: 40px;
-              background-position: center center;
-              background-size: cover;
-              position: absolute;
-              top: 4px;
-              left: 18px;
-              background-image: url(../img/icons/map.png);
-            }
-          }
-
-          .address ~ td {
-            color: var(--font-color-of-secondary);
-          }
-        }
-      }
-
-      .notice {
-        text-align: center;
-
-        h2 {
-          font-family: var(--font-family-secondary);
-          letter-spacing: var(--font-letter-spacing);
-          color: var(--font-color-of-secondary);
-        }
-      }
+      top: 7px;
+      left: 25px;
+      background-image: url(../img/icons/phone-icon.png);
     }
   }
+  .address-icon {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 45px;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 8px;
+      left: 25px;
+      background-image: url(../img/icons/map-icon.png);
+    }
+  }
+}
 
-  /* Media queries */
+/* Media queries */
   @media screen and (max-width: 700px) {
     .grid {
       grid-template-columns: 1fr;
@@ -435,6 +367,5 @@ input:focus, select:focus, textarea:focus {
       opacity: 1;
     }
   }
-}
 
 @import "my_theme";

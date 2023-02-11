@@ -288,118 +288,60 @@ input:focus, select:focus, textarea:focus {
   transition: 300ms ease all;
 }
 
-/* Hire me page styles */
-.main_theme {
-  /* Media queries */
-  /* Animation keyframes */
-}
+/* Hire me page icons */
 .main_theme .container {
-  width: 1024px;
-  position: absolute;
-  left: calc(50% - 512px);
-  top: calc(50% - 350px);
-}
-.main_theme .container .hire-form-body {
-  width: 500px;
-  position: absolute;
-  left: calc(50% - 250px);
   animation-name: form;
   animation-duration: 1000ms;
   animation-timing-function: linear;
   transition: 300ms all ease-in-out;
 }
-.main_theme .container .hire-form-body .hire-form-head {
-  text-align: center;
-}
-.main_theme .container .hire-form-body .hire-form-head .title {
-  font-family: var(--font-family-secondary);
-  letter-spacing: var(--font-letter-spacing);
-  color: var(--font-color-form-acccent);
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: var(--margin-padding-medium);
-}
-.main_theme .container .hire-form-body .hire-form-head .subtitle {
-  font-family: var(--font-family-secondary);
-  letter-spacing: var(--font-letter-spacing);
-  color: var(--font-color-of-secondary);
-  margin-bottom: var(--margin-padding-large);
-}
-.main_theme .container .hire-form-body .contact-info {
-  margin-bottom: var(--margin-padding-large);
-}
-.main_theme .container .hire-form-body .contact-info .contact-info-table {
-  padding: 8px 0;
-  width: 100%;
-}
-.main_theme .container .hire-form-body .contact-info .contact-info-table tr, .main_theme .container .hire-form-body .contact-info .contact-info-table td {
-  padding: 12px;
-  color: var(--font-color-form-acccent);
-  line-height: 24px;
-  letter-spacing: var(--font-letter-spacing);
-}
-.main_theme .container .hire-form-body .contact-info .contact-info-table .phone {
+.main_theme .phone-icon {
   position: relative;
-  padding-left: 60px;
-  text-align: center;
-  font-weight: bold;
 }
-.main_theme .container .hire-form-body .contact-info .contact-info-table .phone::after {
+.main_theme .phone-icon::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background-position: center center;
   background-size: cover;
   position: absolute;
-  top: 4px;
-  left: 18px;
-  background-image: url(../img/icons/phone.png);
+  top: 7px;
+  left: 25px;
+  background-image: url(../img/icons/phone-icon.png);
 }
-.main_theme .container .hire-form-body .contact-info .contact-info-table .address {
-  color: var(--font-color-of-secondary);
+.main_theme .address-icon {
   position: relative;
-  padding-left: 75px;
-  text-align: center;
-  font-weight: bold;
 }
-.main_theme .container .hire-form-body .contact-info .contact-info-table .address::after {
+.main_theme .address-icon::after {
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background-position: center center;
   background-size: cover;
   position: absolute;
-  top: 4px;
-  left: 18px;
-  background-image: url(../img/icons/map.png);
+  top: 8px;
+  left: 25px;
+  background-image: url(../img/icons/map-icon.png);
 }
-.main_theme .container .hire-form-body .contact-info .contact-info-table .address ~ td {
-  color: var(--font-color-of-secondary);
-}
-.main_theme .container .hire-form-body .notice {
-  text-align: center;
-}
-.main_theme .container .hire-form-body .notice h2 {
-  font-family: var(--font-family-secondary);
-  letter-spacing: var(--font-letter-spacing);
-  color: var(--font-color-of-secondary);
-}
+
+/* Media queries */
 @media screen and (max-width: 700px) {
-  .main_theme .grid {
+  .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 2fr;
     grid-template-areas: "info" "content";
   }
-  .main_theme .grid .person-info {
+  .grid .person-info {
     width: 100%;
   }
-  .main_theme .grid .person-content {
+  .grid .person-content {
     width: 100%;
     border-right: none;
   }
 }
+/* Animation keyframes */
 @keyframes person {
   0% {
     transform: translateY(100px);
@@ -466,7 +408,6 @@ input:focus, select:focus, textarea:focus {
     opacity: 1;
   }
 }
-
 body.my_theme {
   background: var(--person-content-background-color);
 }

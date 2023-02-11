@@ -29,26 +29,26 @@
                     <h2 class="text-2xl">Please fill out the form below</h2>
                 </div>
                 <div class="mt-10">
-                    <form class="bg-gray-500 p-6 rounded-2xl box-border shadow-md" action="/forms" id="hire-me-form" method="get">
+                    <form class="block bg-gray-300 p-6 rounded-2xl box-border shadow-md shadow-slate-500 border-2 border-solid border-blue-800 hover:bg-gray-400 transition-all duration-300 ease-linear" action="/forms" id="hire-me-form" method="get">
                             <div class="flex mb-6">
-                                <label class="text-lg text-white mr-12" for="contact-email">Email*</label>
-                                <input class="p-3 w-full ml-1" type="email" id="contact-email" placeholder="Please enter your Email" required>
+                                <label class="text-lg text-blue-800 font-bold mr-12" for="contact-email">Email*</label>
+                                <input class="p-3 w-full ml-3 shadow-inner" type="email" id="contact-email" placeholder="Please enter your Email" required>
                                 <span data-text="Please enter a valid Email address" class="err"></span>
                             </div>
                             <div class="flex mb-6">
-                                <label class="text-lg text-white" for="contact-text">Description</label>
-                                <textarea rows="7" class="p-3 ml-3 mt-1 h-300 w-full" name="description" id="contact-text" placeholder="Please enter a description of your offer"></textarea>
+                                <label class="text-lg text-blue-800 font-bold" for="contact-text">Description</label>
+                                <textarea rows="7" class="p-3 ml-4 mt-1 h-300 w-full shadow-inner" name="description" id="contact-text" placeholder="Please enter a description of your offer"></textarea>
                             </div>
                             <div class="flex">
-                                <label class="text-lg text-white mr-5 inline-block" for="select-work-type">Work type</label>
-                                <select name="selection" id="select-work-type" class="text-gray-900 text-base p-3 leading-6 inline-block">
+                                <label class="text-lg text-blue-800 font-bold flex-none mr-1" for="select-work-type">Work type</label>
+                                <select style="background: url('./img/icons/vector.png') no-repeat center right 17px, #F8FAFC" name="selection" id="select-work-type" class="text-gray-900 text-base ml-6 p-3 w-full cursor-pointer shadow-inner">
                                     <option value="Work in office">Work in office</option>
                                     <option value="Distant work">Distant work</option>
                                     <option value="One-time project">One-time project</option>
                                 </select>
                             </div>
                             <div class="mt-8 text-center">
-                                <button class="bg-blue-800 font-medium text-white p-3 text-lg leading-5 rounded-md" type="submit" form="hire-me-form" value="Submit">Hire me</button>
+                                <button class="bg-blue-800 hover:bg-blue-600 transition-all duration-300 ease-linear font-medium text-white px-8 py-3 text-lg leading-5 rounded-md" type="submit" form="hire-me-form" value="Submit">Hire me</button>
                             </div>
                     </form>
                 </div>

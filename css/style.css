@@ -534,5 +534,9 @@ input:focus, select:focus, textarea:focus {
     .person-content {
         width: 100%;
         border-right: none;
+        padding: 40px;
+    }
+    .person-info header::after, .person-content header::after {
+        width: 100%;
     }
 }

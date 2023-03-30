@@ -5,6 +5,7 @@
   animation-name: person;
   animation-duration: $duration;
   animation-timing-function: linear;
+  animation-delay: 700ms;
 }
 /* Fonts */
 @font-face {
@@ -66,9 +67,7 @@ input:focus, select:focus, textarea:focus {
     z-index: 5;
     background-color: var(--person-info-background-color);
     grid-area: info;
-    & > div {
-      @include block_animation(800ms);
-    }
+    @include block_animation(800ms);
     header {
       &::after {
         content: '';
@@ -102,12 +101,21 @@ input:focus, select:focus, textarea:focus {
       img {
         width: 100%;
         display: block;
-        &:hover {
-          animation-name: photo;
-          animation-duration: 800ms;
-          animation-timing-function: linear;
-        }
       }
+    }
+    .person-photo-animate {
+      animation-name: photo;
+      animation-duration: 800ms;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      transform-origin: center;
+    }
+    .person-photo-animate-reverse {
+      animation-name: reverse-photo;
+      animation-duration: 800ms;
+      animation-timing-function: linear;
+      animation-fill-mode: backwards;
+      transform-origin: center;
     }
     .person-contact-info {
       padding: var(--margin-padding-medium) var(--margin-padding-xlarge) 0 var(--margin-padding-xlarge);
@@ -156,9 +164,7 @@ input:focus, select:focus, textarea:focus {
     border-right: 1px solid var(--font-form-placeholder-color);
     box-sizing: border-box;
     grid-area: content;
-    & > div {
-      @include block_animation(1300ms);
-    }
+    @include block_animation(1300ms);
     .person-skills, .person-work-experience, .person-education {
       margin-top: 57px;
     }
@@ -177,6 +183,22 @@ input:focus, select:focus, textarea:focus {
       }
     }
     .person-summary {
+      position: relative;
+      header::before {
+        content: "A";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--font-color-of-primary);
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        line-height: 13px;
+        color: var(--font-color-of-primary);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+      }
       p {
         font-family: var(--font-family-primary);
         font-size: var(--font-size-medium);
@@ -186,6 +208,22 @@ input:focus, select:focus, textarea:focus {
       }
     }
     .person-work-experience {
+      position: relative;
+      header::before {
+        content: "C";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--font-color-of-primary);
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        line-height: 13px;
+        color: var(--font-color-of-primary);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+      }
       .person-content-p {
         font-family: var(--font-family-primary);
         font-size: var(--font-size-medium);
@@ -201,6 +239,22 @@ input:focus, select:focus, textarea:focus {
       }
     }
     .person-skills {
+      position: relative;
+      header::before {
+        content: "B";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--font-color-of-primary);
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        line-height: 13px;
+        color: var(--font-color-of-primary);
+        position: absolute;
+        left: -40px;
+        top: 8px;
+      }
       .skills-lists-container {
         display: flex;
         .first-skills-list, .second-skills-list {
@@ -214,6 +268,24 @@ input:focus, select:focus, textarea:focus {
             line-height: 20px;
           }
         }
+      }
+    }
+    .person-education {
+      position: relative;
+      header::before {
+        content: "D";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--font-color-of-primary);
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        line-height: 13px;
+        color: var(--font-color-of-primary);
+        position: absolute;
+        left: -40px;
+        top: 8px;
       }
     }
     .person-form-link-container {
@@ -503,43 +575,31 @@ input:focus, select:focus, textarea:focus {
 }
 @keyframes photo {
   0% {
-    transform: scale(100%);
-  }
-  40% {
-    transform: scale(140%);
-  }
-  60% {
-    transform: scale(140%);
+    transform: scale(1);
   }
   100% {
-    transform: scale(100%);
+    transform: scale(1.4);
+  }
+}
+
+@keyframes reverse-photo {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
 @keyframes form {
   0% {
-    transform: scale(200%);
+    transform: scale(2);
     opacity: 0;
-  }
-  20% {
-    transform: scale(180%);
-    opacity: .2;
-  }
-  40% {
-    transform: scale(160%);
-    opacity: .4;
-  }
-  60% {
-    transform: scale(140%);
-    opacity: .6;
-  }
-  80% {
-    transform: scale(120%);
-    opacity: .8;
-  }
-  100% {
-    transform: scale(100%);
-    opacity: 1;
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }
 

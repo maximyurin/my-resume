@@ -7,6 +7,20 @@
   animation-timing-function: linear;
   animation-delay: 700ms;
 }
+@mixin paragraph() {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--font-color-of-primary);
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  line-height: 13px;
+  color: var(--font-color-of-primary);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
 /* Fonts */
 @font-face {
   font-family: Inter, sans-serif;
@@ -165,7 +179,7 @@ input:focus, select:focus, textarea:focus {
     box-sizing: border-box;
     grid-area: content;
     @include block_animation(1300ms);
-    .person-skills, .person-work-experience, .person-education {
+    .person-skills, .person-work-experience, .person-education, .person-portfolio {
       margin-top: 57px;
     }
     .person-header {
@@ -186,18 +200,7 @@ input:focus, select:focus, textarea:focus {
       position: relative;
       header::before {
         content: "A";
-        display: flex;
-        width: 20px;
-        height: 20px;
-        border: 3px solid var(--font-color-of-primary);
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        line-height: 13px;
-        color: var(--font-color-of-primary);
-        position: absolute;
-        left: -40px;
-        top: 8px;
+        @include paragraph();
       }
       p {
         font-family: var(--font-family-primary);
@@ -207,22 +210,30 @@ input:focus, select:focus, textarea:focus {
         text-align: justify;
       }
     }
+    .person-portfolio {
+      position: relative;
+      header::before {
+        content: "P";
+        @include paragraph();
+      }
+      section {
+        .repository-link {
+          display: block;
+          margin: 1rem 0;
+        }
+        p {
+          display: block;
+          border: 2px solid var(--font-color-of-primary);
+          padding: 0.5rem;
+          margin: 0;
+        }
+      }
+    }
     .person-work-experience {
       position: relative;
       header::before {
         content: "C";
-        display: flex;
-        width: 20px;
-        height: 20px;
-        border: 3px solid var(--font-color-of-primary);
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        line-height: 13px;
-        color: var(--font-color-of-primary);
-        position: absolute;
-        left: -40px;
-        top: 8px;
+        @include paragraph();
       }
       .person-content-p {
         font-family: var(--font-family-primary);
@@ -242,18 +253,7 @@ input:focus, select:focus, textarea:focus {
       position: relative;
       header::before {
         content: "B";
-        display: flex;
-        width: 20px;
-        height: 20px;
-        border: 3px solid var(--font-color-of-primary);
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        line-height: 13px;
-        color: var(--font-color-of-primary);
-        position: absolute;
-        left: -40px;
-        top: 8px;
+        @include paragraph();
       }
       .skills-lists-container {
         display: flex;

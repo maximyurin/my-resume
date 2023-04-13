@@ -220,6 +220,7 @@ input:focus, select:focus, textarea:focus {
         .repository-link {
           display: block;
           margin: 1rem 0;
+          color: var(--link-color);
         }
         p {
           display: block;
@@ -273,19 +274,7 @@ input:focus, select:focus, textarea:focus {
     .person-education {
       position: relative;
       header::before {
-        content: "D";
-        display: flex;
-        width: 20px;
-        height: 20px;
-        border: 3px solid var(--font-color-of-primary);
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        line-height: 13px;
-        color: var(--font-color-of-primary);
-        position: absolute;
-        left: -40px;
-        top: 8px;
+      @include paragraph();
       }
     }
     .person-form-link-container {

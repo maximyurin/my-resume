@@ -286,6 +286,7 @@ input:focus, select:focus, textarea:focus {
 .grid .person-content .person-portfolio section .repository-link {
   display: block;
   margin: 1rem 0;
+  color: var(--link-color);
 }
 .grid .person-content .person-portfolio section p {
   display: block;
@@ -360,7 +361,6 @@ input:focus, select:focus, textarea:focus {
   position: relative;
 }
 .grid .person-content .person-education header::before {
-  content: "D";
   display: flex;
   width: 20px;
   height: 20px;

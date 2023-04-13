@@ -51,28 +51,26 @@ document.addEventListener("keydown", (event) => {
  */
 
 const container = document.querySelector(".person-portfolio section");
-window.addEventListener("load", () => {
-  async function getMyPortfolio() {
-    const portfolioList = await fetch(
-      "https://api.github.com/users/maximyurin/repos"
-    );
-    const list = await portfolioList.json();
-    list.forEach((repository) => {
-      const link = document.createElement("a");
-      link.setAttribute("href", `${repository.html_url}`);
-      link.classList.add("repository-link");
-      link.setAttribute("target", "_blank");
-      link.innerHTML = `${repository.full_name}`;
-      container.appendChild(link);
-      if (repository.description) {
-        const repositoryDescription = document.createElement("p");
-        const name = repository.full_name.replace("maximyurin/", "");
-        repositoryDescription.classList.add("repository-description");
-        repositoryDescription.innerHTML = `<strong>Description for ${name}</strong>: ${repository.description}`;
-        container.appendChild(repositoryDescription);
-      }
-      return repository;
-    });
-  }
-  getMyPortfolio();
+
+window.addEventListener("load", async () => {
+  const portfolioList = await fetch(
+    "https://api.github.com/users/maximyurin/repos"
+  );
+  const list = await portfolioList.json();
+  list.forEach((repository) => {
+    const link = document.createElement("a");
+    link.setAttribute("href", `${repository.html_url}`);
+    link.classList.add("repository-link");
+    link.setAttribute("target", "_blank");
+    link.innerHTML = repository.full_name;
+    container.appendChild(link);
+    if (repository.description) {
+      const repositoryDescription = document.createElement("p");
+      const name = repository.full_name.replace("maximyurin/", "");
+      repositoryDescription.classList.add("repository-description");
+      repositoryDescription.innerHTML = `<strong>Description for ${name}</strong>: ${repository.description}`;
+      container.appendChild(repositoryDescription);
+    }
+    return repository;
+  });
 });

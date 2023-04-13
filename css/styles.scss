@@ -224,7 +224,7 @@ input:focus, select:focus, textarea:focus {
         }
         p {
           display: block;
-          border: 2px solid var(--font-color-of-primary);
+          border: 3px solid var(--font-color-of-primary);
           padding: 0.5rem;
           margin: 0;
         }
@@ -274,6 +274,7 @@ input:focus, select:focus, textarea:focus {
     .person-education {
       position: relative;
       header::before {
+        content: "D";
       @include paragraph();
       }
     }

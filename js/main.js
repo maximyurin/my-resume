@@ -50,27 +50,37 @@ document.addEventListener("keydown", (event) => {
 але тільки за умови, що description не є пустим.
  */
 
+// Ищем элемент после которого хотим вставить наш код.
+const personSkills = document.querySelector(".person-skills");
+// Код который мы хотим вставить.
+const portfolio = `
+  <div class="person-portfolio">
+    <header>
+      <h2 class="person-header">My projects</h2>
+    </header>
+    <section></section>
+  </div>
+`;
+// Вставляем код после элемента personSkills.
+personSkills.insertAdjacentHTML("afterend", portfolio);
+// Ищем необходимый элемент куда мы хотим вставить наш код с ассинхронным запросом в ранее вставленном коде.
 const container = document.querySelector(".person-portfolio section");
-
+// Вставляем наш ассинхронный код в нужный, ранее выбранный элемент. Код проверяем с помощью конструкции try - catch, ловимм ошибки в случае сбоя fetch or response.
 window.addEventListener("load", async () => {
-  const portfolioList = await fetch(
-    "https://api.github.com/users/maximyurin/repos"
-  );
-  const list = await portfolioList.json();
-  list.forEach((repository) => {
-    const link = document.createElement("a");
-    link.setAttribute("href", `${repository.html_url}`);
-    link.classList.add("repository-link");
-    link.setAttribute("target", "_blank");
-    link.innerHTML = repository.full_name;
-    container.appendChild(link);
-    if (repository.description) {
-      const repositoryDescription = document.createElement("p");
-      const name = repository.full_name.replace("maximyurin/", "");
-      repositoryDescription.classList.add("repository-description");
-      repositoryDescription.innerHTML = `<strong>Description for ${name}</strong>: ${repository.description}`;
-      container.appendChild(repositoryDescription);
-    }
-    return repository;
-  });
+  try {
+    const portfolioList = await fetch(
+      "https://api.github.com/users/maximyurin/repos"
+    );
+    const list = await portfolioList.json();
+    let html = "";
+    list.forEach((repository) => {
+      html += `<a href="${repository.html_url}" class="repository-link" target="_blank">${repository.full_name}</a>`;
+      repository.description
+        ? (html += `<p class="repository-description"><strong>Description for ${repository.name}</strong>: ${repository.description}</p>`)
+        : "";
+    });
+    container.insertAdjacentHTML("beforeend", html);
+  } catch (error) {
+    console.error(error);
+  }
 });
